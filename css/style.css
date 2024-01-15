@@ -60,15 +60,24 @@ div.banner{
     left: 50%;
     transform: translateX(-50%);
 }
-div.banner{
-    background: linear-gradient(45deg, rgba(188,112,152,0.95) 0%, rgba(255,182,185,0.95) 100%);
-}
-.logo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
 .divider{
     height: 3vh;
     background: linear-gradient(45deg, rgba(188,112,152,0.95) 0%, rgba(255,182,185,0.95) 100%);
+}
+
+.header .nav-links{
+    list-style: none;
+}
+.header .nav-links li{
+    display: inline-block;
+    padding: 0 20px;
+
+}
+.header .nav-links li:hover{
+    transform: scale(1.1);
+}
+.header .nav-links a{
+    font-size: 700;
+    color: var(--black);
+    text-decoration: none;
 }
