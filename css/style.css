@@ -48,6 +48,9 @@ ul.socialNetwork{
     .navFooter ul {
         padding-left: 70px;
     }
+    p.description{
+        font-size: 1.3rem; ;
+    }
 }
 div.banner{
     background: linear-gradient(45deg, rgba(188,112,152,0.95) 0%, rgba(255,182,185,0.95) 100%);
@@ -64,4 +67,8 @@ div.banner{
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+}
+.divider{
+    height: 3vh;
+    background: linear-gradient(45deg, rgba(188,112,152,0.95) 0%, rgba(255,182,185,0.95) 100%);
 }
