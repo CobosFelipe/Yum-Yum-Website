@@ -29,16 +29,41 @@
 </head>
 <body>
     <header class="header">
-      <div class="logo">
-        <img src="./img/logotipo.png" alt="logo" height="20">
-    </div>
-      <nav>
-        <ul class="nav-links">
-           <li><a href="#">Acerca de nosotros</a></li>
-           <li><a href="#">Contactanos</li>
-           <li><a href="#">Categorias</a></li>
-        </ul>
+      <!-- <nav class="d-flex justify-content-between align-items-center p-3">
+          <img src="./img/logo.png" alt="logo">
+          <div class="nav-links-desktop">
+            <ul class="nav-links">
+              <li><a href="#">Acerca de nosotros</a></li>
+              <li><a href="#">Contactanos</li>
+                <li><a href="#">Categorias</a></li>
+                <div class="bar-menu">
+                  <i class="fa-solid fa-bars"></i>
+                </div>
+              </ul>
+          </div>
+    </nav> -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <img src="./img/logo.png" alt="logo">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="navbarToggle">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 nav-links">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Contactenos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Productos</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
+    
         <div class="banner d-flex flex-column-reverse justify-content-center pt-5">
             <div>
                 <h2 class="text-center fs-3 fw-bold mb-5">Acerca de nosotros</h2>
