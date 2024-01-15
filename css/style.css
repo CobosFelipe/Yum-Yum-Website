@@ -9,6 +9,53 @@
     --yellow : #F6D169;
     --pink : #FFB6B9;
     --white : #FFFFFF;
+    --peach : #FDBDA5;
+    --cherry : #BC7098;
+}
+/*Footer section*/
+footer{
+    background: linear-gradient(45deg, rgba(188,112,152,0.95) 0%, rgba(255,182,185,0.95) 100%);;
+}
+.navFooter{
+    display: flex;
+    justify-content: space-between;
+}
+ .navFooter ul {
+    list-style: none;
+    flex-direction: column;
+    padding-top: 10px;
+}
+.navFooter ul li a{
+    text-decoration: none;
+    color: #000000;
+}
+.navFooter ul li a:hover{
+    color: var(--bone-white);
+}
+ul.socialNetwork{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+ ul.socialNetwork li a{
+    margin-right: 20px;
+}
+/*Responsive Design*/
+@media screen and (min-width: 940px) {
+    ul.socialNetwork li a{
+        padding-right: 70px;
+    }
+    .navFooter ul {
+        padding-left: 70px;
+    }
+}
+div.banner{
+    background: linear-gradient(45deg, rgba(188,112,152,0.95) 0%, rgba(255,182,185,0.95) 100%);
+}
+.logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 div.banner{
     background: linear-gradient(45deg, rgba(188,112,152,0.95) 0%, rgba(255,182,185,0.95) 100%);
