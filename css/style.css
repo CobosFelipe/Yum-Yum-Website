@@ -10,3 +10,11 @@
     --pink : #FFB6B9;
     --white : #FFFFFF;
 }
+div.banner{
+    background: linear-gradient(45deg, rgba(188,112,152,0.95) 0%, rgba(255,182,185,0.95) 100%);
+}
+.logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
