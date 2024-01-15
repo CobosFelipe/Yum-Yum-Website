@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   font-family: "Nunito Sans", sans-serif;
-  --degradedBackground: linear-gradient(45deg, rgba(188, 112, 152, 0.95) 0%, rgba(255, 182, 185, 0.95) 100%);
+  --degradedBackground: linear-gradient(90deg, rgba(188, 112, 152, 0.95) 0%, rgba(255, 182, 185, 0.95) 100%);
   --bone-white: #f6f3e4;
   --black: #000000;
   --yellow: #f6d169;
@@ -12,8 +12,6 @@
 }
 
 .cards{
-  display: flex;
-  margin-top: 10px;
   gap: 15px;
 }
 
@@ -69,14 +67,10 @@
   font-weight: 700;
 }
 
-.frontSide,
-.frontSide::before {
-  background: var(--degradedBackground);
-}
-
 .backSide,
 .backSide::before {
-  background: var(--degradedBackground);
+  border: 1px solid #d6d6d6;
+  padding: 5px;
 }
 
 .backSide {
