@@ -51,6 +51,9 @@ ul.socialNetwork{
     p.description{
         font-size: 1.3rem; ;
     }
+    .mobile-icon {
+        display: inline-block !important;
+      }
 }
 div.banner{
     background: linear-gradient(45deg, rgba(188,112,152,0.95) 0%, rgba(255,182,185,0.95) 100%);
@@ -61,22 +64,18 @@ div.banner{
     transform: translateX(-50%);
 }
 .divider{
-    height: 3vh;
+    height: 0.8vh;
+    /*background-color: var(--pink);*/
     background: linear-gradient(45deg, rgba(188,112,152,0.95) 0%, rgba(255,182,185,0.95) 100%);
 }
 
-/* .header .nav-links{
+.nav-links{
     list-style: none;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     margin: 0;
-} */
-.header .nav-links li{
-    display: inline-block;
-    padding: 0 20px;
-
-}
+} 
 .header .nav-links li:hover{
     transform: scale(1.1);
     color: var(--pink);
