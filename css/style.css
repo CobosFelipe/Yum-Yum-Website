@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Nunito Sans', sans-serif;
-    --degradedBackground :  radial-gradient(circle, rgba(246,209,105,0.95) 0%, rgba(250,198,136,0.97) 10%, rgba(251,195,146,0.976) 60%, rgba(255,182,185,1) 100%);
+    --degradedBackground :  linear-gradient(45deg, rgba(188,112,152,0.95) 0%, rgba(255,182,185,0.95) 100%);
     --bone-white :  #F6F3E4 ;
     --black : #000000;
     --yellow : #F6D169;
@@ -14,7 +14,7 @@
 }
 /*Footer section*/
 footer{
-    background: linear-gradient(45deg, rgba(188,112,152,0.95) 0%, rgba(255,182,185,0.95) 100%);;
+    background: var(--degradedBackground);
 }
 .navFooter{
     display: flex;
@@ -28,6 +28,9 @@ footer{
 .navFooter ul li a{
     text-decoration: none;
     color: #000000;
+}
+.navFooter ul li:hover{
+    transform: scale(1.1);
 }
 .navFooter ul li a:hover{
     color: var(--bone-white);
@@ -56,7 +59,7 @@ ul.socialNetwork{
       }
 }
 div.banner{
-    background: linear-gradient(45deg, rgba(188,112,152,0.95) 0%, rgba(255,182,185,0.95) 100%);
+    background: var(--degradedBackground);
 }
 .logo {
     position: absolute;
@@ -65,8 +68,7 @@ div.banner{
 }
 .divider{
     height: 0.8vh;
-    /*background-color: var(--pink);*/
-    background: linear-gradient(45deg, rgba(188,112,152,0.95) 0%, rgba(255,182,185,0.95) 100%);
+    background: var(--degradedBackground);
 }
 
 .nav-links{
