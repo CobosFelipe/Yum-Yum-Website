@@ -1,50 +1,49 @@
-*, *:before, *:after {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Nunito Sans', sans-serif;
-    --degradedBackground :  linear-gradient(45deg, rgba(188,112,152,0.95) 0%, rgba(255,182,185,0.95) 100%);
-    --bone-white :  #F6F3E4 ;
-    --black : #000000;
-    --yellow : #F6D169;
-    --pink : #FFB6B9;
-    --white : #FFFFFF;
-    --peach : #FDBDA5;
-    --cherry : #BC7098;
-    --formBackground : linear-gradient(180deg, rgba(188,112,152,0.95) -20%, rgba(255,182,185,0.95) 100%);
-  }
-    
-  form{
-    background: var(--formBackground);
-    border-radius: 55px;
-  }
-  .button{
-    border: none;
-    border-radius: 5px;
-    background: var(--black);
-    color: var(--white);
-    width: 15vh;
-    height: 4vh;
-  }
-  input.form-control, textarea.form-control{
-    width: 60vw;
-  }
-  /*Responsive Design*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito Sans", sans-serif;
+  --degradedBackground: linear-gradient(45deg, rgba(188, 112, 152, 0.95) 0%, rgba(255, 182, 185, 0.95) 100%);
+  --bone-white: #f6f3e4;
+  --black: #000000;
+  --yellow: #f6d169;
+  --pink: #ffb6b9;
+  --white: #ffffff;
+  --peach: #fdbda5;
+  --cherry: #bc7098;
+  --formBackground: linear-gradient(180deg, rgba(188, 112, 152, 0.95) -20%, rgba(255, 182, 185, 0.95) 100%);
+}
+
+form {
+  background: var(--formBackground);
+  border-radius: 55px;
+}
+.button {
+  border: none;
+  border-radius: 5px;
+  background: var(--black);
+  color: var(--white);
+  width: 15vh;
+  height: 4vh;
+}
+input.form-control,
+textarea.form-control {
+  width: 60vw;
+}
+/*Responsive Design*/
 @media screen and (min-width: 940px) {
-    main{
-        display: flex;
-        justify-content: center;
-    }
-    form{
-        width:35vw;
-    }
-    input.form-control, textarea.form-control{
-        width: 25vw;
-      }
-    .button{
-        height: 8vh;
-        width: 30vh;
-    }
+  main {
+    display: flex;
+    justify-content: center;
+  }
+  form {
+    width: 35vw;
+  }
+  input.form-control,
+  textarea.form-control {
+    width: 25vw;
+  }
+  .button {
+    height: 8vh;
+    width: 30vh;
+  }
 }
