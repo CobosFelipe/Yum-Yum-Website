@@ -64,19 +64,23 @@
           <div class="logo-send-image h-75">
             <img src="./img/logoEnvio.png" alt="sendImage" >
           </div>
-          <form>
+          <form class="needs-validation" novalidate>
             <div>
               <div class="mb-3">
                 <label for="name" class="form-label">Nombre</label>
                 <input type="text" class="form-control" id="name" placeholder="Nombre completo" required>
+                <div class="valid-feedback" id="valid-message">
+                  Looks good!
+                </div>
               </div>
               <div class="mb-3">
                 <label for="contact" class="form-label">Contacto</label>
-                <input type="tel" class="form-control" id="contact" placeholder="Ingresa tu telefono">
+                <input type="tel" class="form-control" id="contact" placeholder="Ingresa tu telefono" required>
+                <span class="error-message" id="errorNumero"></span>
               </div>
               <div class="mb-3">
                 <label for="email" class="form-label">Correo electronico</label>
-                <input type="email" class="form-control" id="email" placeholder="email">
+                <input type="email" class="form-control" id="email" placeholder="Email" required>
               </div>
               <div class="mb-3">
                 <label for="message" class="form-label">Mensaje</label>
@@ -125,5 +129,6 @@
       </ul>
     </div>
   </footer>
+  <script src="script/contact.js"></script>
 </body>
 </html>
