@@ -12,38 +12,34 @@
   --cherry: #bc7098;
   --formBackground: linear-gradient(180deg, rgba(188, 112, 152, 0.95) -20%, rgba(255, 182, 185, 0.95) 100%);
 }
-
-form {
-  background: var(--formBackground);
-  border-radius: 55px;
+.div-form{
+  background: var(--degradedBackground);
 }
-.button {
-  border: none;
-  border-radius: 5px;
-  background: var(--black);
-  color: var(--white);
-  width: 15vh;
-  height: 4vh;
+.card{
+  border-radius: 20px !important;
+  width: 90vw;
+  margin: 2rem 0;
 }
-input.form-control,
-textarea.form-control {
-  width: 60vw;
+form{
+  width: 100%;
 }
-/*Responsive Design*/
+.btnSubmit{
+  width: 20vh;
+}
+.logo-send-image{
+  display: none;
+}
 @media screen and (min-width: 940px) {
-  main {
+  .card{
+    width: 90vh;
+}
+.logo-send-image{
     display: flex;
+    flex-direction: column;
     justify-content: center;
-  }
-  form {
-    width: 35vw;
-  }
-  input.form-control,
-  textarea.form-control {
-    width: 25vw;
-  }
-  .button {
-    height: 8vh;
-    width: 30vh;
-  }
+    align-items: center;
+}
+.logo-send-image img{
+    width: 300px;
+}
 }
