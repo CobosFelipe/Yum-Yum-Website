@@ -44,7 +44,7 @@
     text-decoration: none;
 }
 .header .nav-links li a.nav-link:hover{
-    color: var(--peach);
+    color: var(--pink);
 }
 .heart:hover{
     transform: scale(1.25);
