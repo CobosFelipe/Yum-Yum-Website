@@ -53,7 +53,7 @@ div.banner{
     transform: translateX(-50%);
 }
 .divider{
-    height: 0.8vh;
+    height: 2vh;
     background: var(--degradedBackground);
 }
 .nav-links{
@@ -80,6 +80,10 @@ div.banner{
 .header .nav-links li a.nav-link:hover{
     color: var(--peach);
 }
+.heart:hover{
+    transform: scale(1.25);
+    transition-duration: 1.5s;
+}
 
 /*Responsive Design*/
 @media screen and (min-width: 940px) {
@@ -94,6 +98,13 @@ div.banner{
     }
     .mobile-icon {
         display: inline-block !important;
-      }
+    }
+    .profile{
+        align-items: center;
+    }
+    .profileText{
+        width: 50vw;
+        margin: 0 2vw;
+    }
 }
 

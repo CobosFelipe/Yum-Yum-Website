@@ -8,6 +8,7 @@
   --black: #000000;
   --yellow: #f6d169;
   --pink: #ffb6b9;
+  --peach : #FDBDA5;
   --white: #ffffff;
 }
 
@@ -69,7 +70,7 @@
 
 .backSide,
 .backSide::before {
-  border: 1px solid #d6d6d6;
+  border: 2px solid var(--pink);
   padding: 5px;
 }
 
