@@ -12,42 +12,7 @@
     --peach : #FDBDA5;
     --cherry : #BC7098;
 }
-/*Footer section*/
-
-footer{
-    background-color: #f8f9fa;
-}
-
-.navFooter{
-    display: flex;
-    justify-content: space-between;
-}
-.navFooter ul {
-    list-style: none;
-    flex-direction: column;
-    padding-top: 10px;
-}
-.navFooter ul li a, .copyright{
-    text-decoration: none;
-    color: #6c757d;
-}
-.navFooter ul li:hover{
-    transform: scale(1.1);
-}
-.navFooter ul li a:hover{
-    color: var(--pink);
-}
-ul.socialNetwork{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-ul.socialNetwork li a{
-    margin-right: 20px;
-}
-div.banner{
-    background: var(--degradedBackground);
-}
+/*Header section*/
 .logo {
     position: absolute;
     left: 50%;
@@ -85,15 +50,52 @@ div.banner{
     transform: scale(1.25);
     transition-duration: 1.5s;
 }
-
+/*Provisional image*/
+.img img{
+    width: 400px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.img{
+    text-align: center;
+}
+/*Footer section*/
+footer{
+    background-color: #f8f9fa;
+}
+.navFooter{
+    display: flex;
+    justify-content: space-between;
+}
+.navFooter ul {
+    list-style: none;
+    flex-direction: column;
+    padding-top: 10px;
+}
+.navFooter ul li a, .copyright{
+    text-decoration: none;
+    color: #6c757d;
+}
+.navFooter ul li:hover{
+    transform: scale(1.1);
+}
+.navFooter ul li a:hover{
+    color: var(--pink);
+}
+ul.socialNetwork{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+ul.socialNetwork li a{
+    margin-right: 20px;
+}
+div.banner{
+    background: var(--degradedBackground);
+}
 /*Responsive Design*/
 @media screen and (min-width: 940px) {
-    ul.socialNetwork li a{
-        padding-right: 70px;
-    }
-    .navFooter ul {
-        padding-left: 70px;
-    }
+    /*Main section*/
     p.description{
         font-size: 1.3rem; ;
     }
@@ -107,6 +109,17 @@ div.banner{
         width: 50vw;
         margin: 0 2vw;
     }
+    /*Provisional image*/
+    .img img{
+        width: 45vw;
+    }
+    /*Footer section*/
+    ul.socialNetwork li a{
+        padding-right: 70px;
+    }
+    .navFooter ul {
+        padding-left: 70px;
+    }
     .links-footer{
         flex-direction: column;
     }
@@ -115,6 +128,6 @@ div.banner{
     }
     .ul-footer2{
         padding-top: 0 !important;
-    }
+    }  
 }
 
