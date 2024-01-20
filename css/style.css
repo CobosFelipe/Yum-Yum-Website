@@ -13,8 +13,9 @@
     --cherry : #BC7098;
 }
 /*Footer section*/
+
 footer{
-    background: var(--degradedBackground);
+    background-color: #f8f9fa;
 }
 
 .navFooter{
@@ -26,15 +27,15 @@ footer{
     flex-direction: column;
     padding-top: 10px;
 }
-.navFooter ul li a{
+.navFooter ul li a, .copyright{
     text-decoration: none;
-    color: #000000;
+    color: #6c757d;
 }
 .navFooter ul li:hover{
     transform: scale(1.1);
 }
 .navFooter ul li a:hover{
-    color: var(--bone-white);
+    color: var(--pink);
 }
 ul.socialNetwork{
     display: flex;
@@ -105,6 +106,15 @@ div.banner{
     .profileText{
         width: 50vw;
         margin: 0 2vw;
+    }
+    .links-footer{
+        flex-direction: column;
+    }
+    .ul-footer{
+        margin: 0;
+    }
+    .ul-footer2{
+        padding-top: 0 !important;
     }
 }
 

@@ -13,7 +13,7 @@
   --formBackground: linear-gradient(180deg, rgba(188, 112, 152, 0.95) -20%, rgba(255, 182, 185, 0.95) 100%);
 }
 .div-form{
-  background: var(--degradedBackground);
+  background: var(--formBackground);
 }
 .card{
   border-radius: 20px !important;
