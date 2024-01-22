@@ -82,7 +82,7 @@ footer{
     color: #6c757d;
 }
 .navFooter ul li:hover{
-    transform: scale(1.1);
+    transform: scale(1) translateX(10%);
 }
 .navFooter ul li a:hover{
     color: var(--pink);
@@ -103,7 +103,7 @@ div.banner{
 @media screen and (min-width: 940px) {
     /*Main section*/
     .nav-links{
-        width: 35vw;
+        width: 30vw;
     }
     p.description{
         font-size: 1.3rem; ;
