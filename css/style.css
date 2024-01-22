@@ -30,9 +30,11 @@
     margin: 0;
 }
 .nav-link i:hover{
-    transform: scale(1.1);
     color: var(--pink);
     font-size: 30px;
+}
+.imgIcon:hover{
+    filter: invert(92%) sepia(37%) saturate(3147%) hue-rotate(289deg) brightness(104%) contrast(103%);
 }
 .nav-links li:hover{
     transform: scale(1.1);
@@ -129,6 +131,11 @@ div.banner{
     .navFooter ul {
         display: flex;
         align-items: flex-start;
+    }
+    .socialNetwork{
+        display: flex;
+        width: 200px;
+        justify-content: space-evenly;
     }
     .links-footer{
         flex-direction: column;
