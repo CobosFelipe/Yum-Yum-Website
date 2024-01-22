@@ -30,9 +30,11 @@
     margin: 0;
 }
 .nav-link i:hover{
-    transform: scale(1.1);
     color: var(--pink);
     font-size: 30px;
+}
+.imgIcon:hover{
+    filter: invert(92%) sepia(37%) saturate(3147%) hue-rotate(289deg) brightness(104%) contrast(103%);
 }
 .nav-links li:hover{
     transform: scale(1.1);
@@ -87,9 +89,6 @@ ul.socialNetwork{
     flex-direction: row;
     align-items: center;
 }
-ul.socialNetwork li a{
-    margin-right: 20px;
-}
 div.banner{
     background: var(--degradedBackground);
 }
@@ -114,11 +113,10 @@ div.banner{
         width: 45vw;
     }
     /*Footer section*/
-    ul.socialNetwork li a{
-        padding-right: 70px;
-    }
-    .navFooter ul {
-        padding-left: 70px;
+    .socialNetwork{
+        display: flex;
+        width: 200px;
+        justify-content: space-evenly;
     }
     .links-footer{
         flex-direction: column;
