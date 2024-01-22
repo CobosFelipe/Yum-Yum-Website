@@ -78,6 +78,7 @@ footer{
     flex-direction: column;
     padding-top: 10px;
     text-align: center;
+    padding-left: 0;
 }
 .navFooter ul li a, .copyright{
     text-decoration: none;
@@ -127,6 +128,7 @@ div.banner{
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        padding-left: 32px;
     }
     .navFooter ul {
         display: flex;
