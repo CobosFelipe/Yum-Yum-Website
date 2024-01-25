@@ -46,7 +46,7 @@
                         </li>
                         <li class="nav-item mobile-icon">
                             <a class="nav-link" href="#">
-                                <img src="/svg/shopping-bag.svg" class="imgIcon"/>
+                                <img src="/svg/shopping-bag.svg" class="imgIcon" />
                             </a>
                         </li>
                     </ul>
@@ -55,9 +55,59 @@
         </nav>
     </header>
     <main>
-        <div class="img">
-        <img src="/img/Pagina_en_construccion.jpg" alt="Pagina_en_construccion">
-    </div>
+        <div class="d-flex justify-content-evenly mt-5 mb-5 flex-wrap" id="products">
+           
+        </div>
+        <div class="d-flex justify-content-center">
+            <button type="button" class="btn btn-dark mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal">Cargar más productos</button>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Crear un nuevo producto</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-bod p-4">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Id</label>
+                                    <input type="text" class="form-control" id="id" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Nombre del producto</label>
+                                    <input type="text" class="form-control" id="title" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Descripcion</label>
+                                    <input type="text" class="form-control" id="description" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Precio</label>
+                                    <input type="text" class="form-control" id="price" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Stock</label>
+                                    <input type="text" class="form-control" id="stock" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputPassword1" class="form-label">Color</label>
+                                    <input type="text" class="form-control" id="color" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Url de la imagen</label>
+                                    <input type="text" class="form-control" id="image" required>
+                                </div>
+                                <div class="d-flex justify-content-evenly">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                    <button type="submit" class="btn btn-dark" id="btn-save">Guardar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
         <div class="navFooter">
@@ -97,6 +147,7 @@
         <div class="text-center pb-3">
             <span class="copyright">© 2024 Copyright: Dev with ❤ by Sense8</span>
         </div>
+        <script src="/js/products.js"></script>
     </footer>
 </body>
 
