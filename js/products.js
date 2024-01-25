@@ -131,6 +131,14 @@ const inputImg = document.getElementById("image").value;
         imageUrl : inputImg
     })
     localStorage.setItem('products', JSON.stringify(productsStorage))
+    form.reset();
+    Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Se ha creado el producto exitosamente",
+        showConfirmButton: false,
+        timer: 1500
+      });
 })
 
 
