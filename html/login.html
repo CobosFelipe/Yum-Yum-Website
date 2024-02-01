@@ -72,8 +72,11 @@
       </nav>
     </header>
     <!-- Formulario de registro -->
+    <div class="d-flex justify-content-center">
+      <button class="btn btn-primary" id="bt-changeForm">Cambiar form</button>
+    </div>
     <main class="div-form d-flex justify-content-center">
-      <div class="card">
+      <div class="card form-container d-none" id="login-form">
         <h2 class="fs-3 text-center mt-5 mb-4 fw-bold">Registro</h2>
         <div class="card-body d-flex justify-content-center p-0">
           <form class="needs-validation" novalidate>
@@ -120,7 +123,7 @@
         </div>
       </div>
       <!-- Formulario de inicio de sesion -->
-      <div class="card d-none">
+      <div class="card form-container" id="register-form">
         <h2 class="fs-3 text-center mt-5 fw-bold">Iniciar Sesión</h2>
         <div class="card-body d-flex justify-content-center p-0 align-items-center">
           <form class="needs-validation" novalidate>
@@ -217,5 +220,6 @@
         <span class="copyright">© 2024 Copyright: Dev with ❤ by Sense8</span>
       </div>
     </footer>
+    <script src="/js/login.js"></script>
   </body>
 </html>
