@@ -19,7 +19,13 @@
   border-radius: 20px !important;
   width: 90vw;
   margin: 2rem 0;
-  height: 655px;
+}
+.form-conteiner{
+  display: flex;
+}
+.form-input{
+  width: 50%;
+  margin-right: 1rem;
 }
 .form-control {
   padding-right: 2.5rem;

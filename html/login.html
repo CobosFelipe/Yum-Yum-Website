@@ -78,39 +78,51 @@
         <div class="card-body d-flex justify-content-center p-0">
           <form class="needs-validation" novalidate>
             <div>
-              <div class="mb-3">
-                <label for="name" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="name" placeholder="Ingresa nombre completo" required />
-                <div class="valid-feedback">Se ve bien.</div>
-                <div class="invalid-feedback">Por favor ingresa un valor en este campo.</div>
+              <div class="form-conteiner">
+                <div class="form-input mb-3">
+                  <label for="name" class="form-label">Nombre</label>
+                  <input type="text" class="form-control" id="name" placeholder="Ingresa tu nombre" required />
+                  <div class="valid-feedback">Se ve bien.</div>
+                  <div class="invalid-feedback">Por favor ingresa un valor en este campo.</div>
+                </div>
+                <div class="form-input mb-3">
+                  <label for="contact" class="form-label">Contacto</label>
+                  <input type="tel" class="form-control" id="contact" placeholder="Ingresa tu telefono" required />
+                  <div class="valid-feedback">Se ve bien.</div>
+                  <div class="invalid-feedback">Por favor ingresa un valor en este campo, este campo solo acepta números como valores.</div>
+                </div>
               </div>
-              <div class="mb-3">
-                <label for="contact" class="form-label">Contacto</label>
-                <input type="tel" class="form-control" id="contact" placeholder="Ingresa tu telefono" required />
-                <div class="valid-feedback">Se ve bien.</div>
-                <div class="invalid-feedback">Por favor ingresa un valor en este campo, este campo solo acepta números como valores.</div>
+              <div class="form-conteiner">
+                <div class="form-input mb-3">
+                  <label for="email" class="form-label">Correo electronico</label>
+                  <input type="email" class="form-control" id="email" placeholder="Ingresa tu email" required />
+                  <div class="valid-feedback">Se ve bien.</div>
+                  <div class="invalid-feedback">El correo que ingresaste no es valido o el campo está vacio.</div>
+                </div>
+                <div class="form-input mb-3">
+                  <label for="email" class="form-label">Correo electronico</label>
+                  <input type="email" class="form-control" id="email" placeholder="Confirma tu email" required />
+                  <div class="valid-feedback">Se ve bien.</div>
+                  <div class="invalid-feedback">El correo que ingresaste no es valido o el campo está vacio.</div>
+                </div>
               </div>
-              <div class="mb-3">
-                <label for="email" class="form-label">Correo electronico</label>
-                <input type="email" class="form-control" id="email" placeholder="Ingresa tu email" required />
-                <div class="valid-feedback">Se ve bien.</div>
-                <div class="invalid-feedback">El correo que ingresaste no es valido o el campo está vacio.</div>
-              </div>
-              <div class="mb-3 position-relative">
-                <label for="password" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña" required />
-                <img class="position-absolute" src="/svg/eye.svg" />
-                <img class="position-absolute d-none" src="/svg/eye-off.svg" />
-                <div class="valid-feedback">Se ve bien.</div>
-                <div class="invalid-feedback">Ingresa una contraseña de al menos 8 caracteres.</div>
-              </div>
-              <div class="mb-3 position-relative">
-                <label for="password2" class="form-label">Confirmar contraseña</label>
-                <input type="password" class="form-control" id="password2" placeholder="Confirmar contraseña" required />
-                <img class="position-absolute" src="/svg/eye.svg" />
-                <img class="position-absolute d-none" src="/svg/eye-off.svg" />
-                <div class="valid-feedback">Se ve bien.</div>
-                <div class="invalid-feedback">Las contraseñas no coinciden.</div>
+              <div class="form-conteiner">
+                <div class="form-input mb-3 position-relative">
+                  <label for="password" class="form-label">Contraseña</label>
+                  <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña" required />
+                  <img class="position-absolute" src="/svg/eye.svg" />
+                  <img class="position-absolute d-none" src="/svg/eye-off.svg" />
+                  <div class="valid-feedback">Se ve bien.</div>
+                  <div class="invalid-feedback">Ingresa una contraseña de al menos 8 caracteres.</div>
+                </div>
+                <div class="form-input mb-3 position-relative">
+                  <label for="password2" class="form-label">Confirmar contraseña</label>
+                  <input type="password" class="form-control" id="password2" placeholder="Confirmar contraseña" required />
+                  <img class="position-absolute d-none" src="/svg/eye.svg" />
+                  <img class="position-absolute" src="/svg/eye-off.svg" />
+                  <div class="valid-feedback">Se ve bien.</div>
+                  <div class="invalid-feedback">Las contraseñas no coinciden.</div>
+                </div>
               </div>
               <div class="d-flex justify-content-center mb-5 mt-5">
                 <button type="submit" class="btn btn-dark btnSubmit" id="btn-submit">Registro</button>
@@ -124,9 +136,9 @@
         <h2 class="fs-3 text-center mt-5 fw-bold">Iniciar Sesión</h2>
         <div class="card-body d-flex justify-content-center p-0 align-items-center">
           <form class="needs-validation" novalidate>
-            <div class="text-center mb-3">
+            <!-- <div class="text-center mb-3">
               <img src="/img/logotipo.png" alt="logo" />
-            </div>
+            </div> -->
             <div>
               <div class="mb-3">
                 <label for="email" class="form-label">Correo electronico</label>
@@ -217,5 +229,6 @@
         <span class="copyright">© 2024 Copyright: Dev with ❤ by Sense8</span>
       </div>
     </footer>
+    <script src="/js/login.js"></script>
   </body>
 </html>
