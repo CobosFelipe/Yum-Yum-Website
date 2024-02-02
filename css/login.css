@@ -26,7 +26,8 @@ body {
 }
 
 section {
-	min-height: 580px;
+	min-height: 730px;
+  min-width: 380px;
 	padding: 15px;
 	box-shadow: var(--cherry);
 	border-radius: 10px;
@@ -68,7 +69,7 @@ form {
 
 #SignIn:checked ~ section #SignInFormData,
 #SignUp:checked ~ section #SignUpFormData {
-	transform: translatex(-1%);
+	transform: translatex(10%);
 }
 
 #SignIn:checked ~ section nav label:first-child,
