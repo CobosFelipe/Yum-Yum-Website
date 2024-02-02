@@ -8,5 +8,5 @@ btnChangeForm.addEventListener('click', (e) => {
   setTimeout(() => {
     formLoginChange.classList.toggle("d-none");
     registerFormChange.classList.toggle("d-none");
-  }, 1000);
+  }, 0);
 });

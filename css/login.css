@@ -55,7 +55,7 @@ form{
   }
 }
 .form-container {
-  animation: rotateForm 0.3s ease-in;
+  animation: rotateForm 0.5s ease-in;
 }
 
 @media screen and (min-width: 940px) {
