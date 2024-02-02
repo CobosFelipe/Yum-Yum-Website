@@ -89,7 +89,7 @@ const PRODUCTS = [ {
     imageUrl : "https://res.cloudinary.com/dvun7eeq1/image/upload/v1706200502/aretes_z5dcwj.jpg"
 }
 ]
-const productsStorage = JSON.parse(localStorage.getItem('products')) || PRODUCTS
+const productsStorage = JSON.parse(localStorage.getItem('products')) || []
 const cardContainer = document.getElementById("products");
 const form = document.querySelector("form")
 
@@ -131,6 +131,14 @@ const inputImg = document.getElementById("image").value;
         imageUrl : inputImg
     })
     localStorage.setItem('products', JSON.stringify(productsStorage))
+    form.reset();
+    Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Se ha creado el producto exitosamente",
+        showConfirmButton: false,
+        timer: 1500
+      });
 })
 
 

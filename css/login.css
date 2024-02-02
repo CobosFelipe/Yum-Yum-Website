@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito Sans", sans-serif;
+  --degradedBackground: linear-gradient(45deg, rgba(188, 112, 152, 0.95) 0%, rgba(255, 182, 185, 0.95) 100%);
+  --bone-white: #f6f3e4;
+  --black: #000000;
+  --yellow: #f6d169;
+  --pink: #ffb6b9;
+  --white: #ffffff;
+  --peach: #fdbda5;
+  --cherry: #bc7098;
+  --formBackground: linear-gradient(180deg, rgba(188, 112, 152, 0.95) -20%, rgba(255, 182, 185, 0.95) 100%);
+}
+.div-form{
+  background: var(--formBackground);
+}
+.card{
+  border-radius: 20px !important;
+  width: 90vw;
+  margin: 2rem 0;
+  height: 655px;
+}
+.form-control {
+  padding-right: 2.5rem;
+}
+.position-absolute {
+  right: 1rem;
+  top: 70%;
+  transform: translateY(-40%);
+  position: absolute;
+  cursor: pointer;
+}
+form{
+  width: 90%;
+}
+.btnSubmit{
+  width: 20vh;
+}
+.icon-container{
+  margin: 0 15%;
+  width: 70%;
+}
+.icon{
+  width: 40px;
+}
+@keyframes rotateForm {
+  from {
+    transform: rotateY(0deg);
+    opacity: 100;
+  }
+  to {
+    transform: rotateY(90deg);
+    opacity: 0;
+  }
+}
+.form-container {
+  animation: rotateForm 0.3s ease-in;
+}
+
+@media screen and (min-width: 940px) {
+  .card{
+    width: 60vh;
+  }
+  .logo-send-image{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
