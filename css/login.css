@@ -26,7 +26,7 @@ body {
 }
 
 section {
-	min-height: 740px;
+	min-height: 730px;
   min-width: 380px;
 	padding: 15px;
 	box-shadow: var(--cherry);
@@ -35,35 +35,23 @@ section {
 	overflow: hidden;
 	position: relative;
 }
-.card{
-  border-radius: 20px !important;
-  width: 90vw;
-  margin: 2rem 0;
-}
-.form-conteiner{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.password-conteiner{
-  height: 120px;
-}
-.form-input{
-  width: 100%;
+#logo {
+	justify-content: center;
+	display: flex;
+	align-items: center;
+	margin: 15px;
 }
 
 nav {
-	margin: 5px;
+	margin: 20px;
 	display: flex;
 	justify-content: center;
 	margin-bottom: 30px;
 }
-.position-absolute {
-  right: 1rem;
-  top: 48%;
-  transform: translateY(-45%);
-  position: absolute;
-  cursor: pointer;
+
+nav label {
+    font-size: 22px;
+	cursor: pointer;
 }
 
 nav label:first-child {
@@ -83,18 +71,17 @@ form {
 #SignUp:checked ~ section #SignUpFormData {
 	transform: translatex(10%);
 }
-.form-buttons{
-  justify-content: space-around;
-  margin: 5px 0px 15px;
-}
-.btnSubmit{
-  width: 20vh;
+
+#SignIn:checked ~ section nav label:first-child,
+#SignUp:checked ~ section nav label:last-child {
+	margin-bottom: -2px;
+	border-bottom: 2px solid var(--pink);
 }
 
 input,
 button {
 	color: var(--black);
-	border-radius: 15px;
+	border-radius: 8px !important;
 	padding: 15px 20px;
 	border: none;
 	outline: none;
@@ -110,22 +97,28 @@ button {
 	margin-top: 5px;
     font-size: 20px;
 }
-@media screen and (min-width: 940px) {
-  .card{
-    width: 70vh;
-  }
-  .logo-send-image{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .form-conteiner{
-    display: flex;
-    flex-direction: row;
-  }
-  .form-input{
-    width: 50%;
-    margin: 0 .5rem;
-  }
+
+a {
+	font-weight: bold;
+	text-decoration: none;
+	margin-top: 20px;
+	cursor: pointer;
+	text-align: center;
 }
+.logos{
+    display: flex;
+}
+ /*RESPONSIVE DESING*/
+ @media screen and (min-width: 740px){
+    section{
+        min-width: 490px;
+        min-height: 700px;
+    }
+    #SignIn:checked ~ section #SignInFormData,
+#SignUp:checked ~ section #SignUpFormData {
+	transform: translatex(15%);
+}
+form{
+    min-width: 350px;
+}
+ }
