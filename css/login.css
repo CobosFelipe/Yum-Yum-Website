@@ -26,7 +26,7 @@ body {
 }
 
 section {
-	min-height: 730px;
+	min-height: 740px;
   min-width: 380px;
 	padding: 15px;
 	box-shadow: var(--cherry);
@@ -39,11 +39,10 @@ section {
 	justify-content: center;
 	display: flex;
 	align-items: center;
-	margin: 15px;
 }
 
 nav {
-	margin: 20px;
+	margin: 5px;
 	display: flex;
 	justify-content: center;
 	margin-bottom: 30px;
@@ -83,7 +82,6 @@ button {
 	color: var(--black);
 	border-radius: 15px;
 	padding: 15px 20px;
-	margin-bottom: 20px;
 	border: none;
 	outline: none;
 	font-size: 16px;
@@ -109,11 +107,14 @@ a {
 .logos{
     display: flex;
 }
+.invalid-feedback{
+  margin-bottom: 10px;
+}
  /*RESPONSIVE DESING*/
  @media screen and (min-width: 740px){
     section{
         min-width: 490px;
-        min-height: 700px;
+        min-height: 730px;
     }
     #SignIn:checked ~ section #SignInFormData,
 #SignUp:checked ~ section #SignUpFormData {
