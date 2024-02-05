@@ -35,10 +35,21 @@ section {
 	overflow: hidden;
 	position: relative;
 }
-#logo {
-	justify-content: center;
-	display: flex;
-	align-items: center;
+.card{
+  border-radius: 20px !important;
+  width: 90vw;
+  margin: 2rem 0;
+}
+.form-conteiner{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.password-conteiner{
+  height: 120px;
+}
+.form-input{
+  width: 100%;
 }
 
 nav {
@@ -47,10 +58,12 @@ nav {
 	justify-content: center;
 	margin-bottom: 30px;
 }
-
-nav label {
-    font-size: 22px;
-	cursor: pointer;
+.position-absolute {
+  right: 1rem;
+  top: 48%;
+  transform: translateY(-45%);
+  position: absolute;
+  cursor: pointer;
 }
 
 nav label:first-child {
@@ -70,11 +83,12 @@ form {
 #SignUp:checked ~ section #SignUpFormData {
 	transform: translatex(10%);
 }
-
-#SignIn:checked ~ section nav label:first-child,
-#SignUp:checked ~ section nav label:last-child {
-	margin-bottom: -2px;
-	border-bottom: 2px solid var(--pink);
+.form-buttons{
+  justify-content: space-around;
+  margin: 5px 0px 15px;
+}
+.btnSubmit{
+  width: 20vh;
 }
 
 input,
@@ -96,31 +110,22 @@ button {
 	margin-top: 5px;
     font-size: 20px;
 }
-
-a {
-	font-weight: bold;
-	text-decoration: none;
-	margin-top: 20px;
-	cursor: pointer;
-	text-align: center;
-}
-.logos{
+@media screen and (min-width: 940px) {
+  .card{
+    width: 70vh;
+  }
+  .logo-send-image{
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .form-conteiner{
+    display: flex;
+    flex-direction: row;
+  }
+  .form-input{
+    width: 50%;
+    margin: 0 .5rem;
+  }
 }
-.invalid-feedback{
-  margin-bottom: 10px;
-}
- /*RESPONSIVE DESING*/
- @media screen and (min-width: 740px){
-    section{
-        min-width: 490px;
-        min-height: 730px;
-    }
-    #SignIn:checked ~ section #SignInFormData,
-#SignUp:checked ~ section #SignUpFormData {
-	transform: translatex(15%);
-}
-form{
-    min-width: 350px;
-}
- }
