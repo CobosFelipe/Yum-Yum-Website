@@ -27,6 +27,8 @@
 
 //Validating password inputs
 const newPassword = document.querySelector("#newPassword");
+const validity = newPassword.validity;
+console.log(validity);
 const ConfirmPassword = document.querySelector("#ConfirmPassword");
 
 const validation = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/g;
