@@ -4,6 +4,7 @@
 
   // Fetch all the forms we want to apply custom Bootstrap validation styles to
   var forms = document.querySelectorAll(".needs-validation");
+  
 
   // Loop over them and prevent submission
   Array.prototype.slice.call(forms).forEach(function (form) {
@@ -23,3 +24,15 @@
     );
   });
 })();
+
+//Validating password inputs
+const newPassword = document.querySelector("#newPassword");
+const ConfirmPassword = document.querySelector("#ConfirmPassword");
+
+const validation = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/g;
+
+const invalidFeed = document.querySelector('.invalid-feedback')
+
+  newPassword.addEventListener('blur', (e) => {
+})
+

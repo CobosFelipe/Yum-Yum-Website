@@ -35,6 +35,7 @@ section {
 	overflow: hidden;
 	position: relative;
 }
+
 #logo {
 	justify-content: center;
 	display: flex;
@@ -50,12 +51,16 @@ nav {
 }
 
 nav label {
-    font-size: 22px;
+  font-size: 22px;
 	cursor: pointer;
 }
 
 nav label:first-child {
 	margin-right: 20px;
+}
+
+.input-conteiner{
+	height: 4rem;
 }
 
 form {
@@ -107,6 +112,9 @@ a {
 }
 .logos{
     display: flex;
+}
+.icon{
+  width: 40px;
 }
  /*RESPONSIVE DESING*/
  @media screen and (min-width: 740px){
