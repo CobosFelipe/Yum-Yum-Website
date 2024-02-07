@@ -60,7 +60,7 @@
       <!-- Registro -->
       <form class="needs-validation" novalidate id="SignUpFormData">
         <div class="input-conteiner">
-          <input class="form-control" type="text" id="name" placeholder="Nombre Completo" required />
+          <input class="form-control" type="text" id="name" placeholder="Nombre Completo" pattern="" required />
           <div class="valid-feedback">Se ve bien.</div>
           <div class="invalid-feedback">El nombre que ingresaste no es valido.</div>
         </div>
@@ -82,7 +82,7 @@
         <div class="input-conteiner mb-4">
           <input class="form-control input-password2" type="password" id="ConfirmPassword" placeholder="Confirmar contraseña" required />
           <div class="valid-feedback">Se ve bien.</div>
-          <div class="invalid-feedback">El campo no es válido</div>
+          <div class="invalid-feedback">Las contraseñas no coinciden</div>
         </div>
         <button type="submit" title="Sing Up">Registrarse</button>
         <div class="d-flex justify-content-evenly mt-1 mb-5 position-relative icon-container">

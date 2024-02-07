@@ -1,4 +1,68 @@
-// Example starter JavaScript for disabling form submissions if there are invalid fields
+// Capturar los elementos inputs
+const nameInput = document.getElementById("name");
+const phoneInput = document.getElementById("phone");
+const emailInput = document.getElementById("email");
+const newPassword = document.querySelector("#newPassword");
+const confirmPasswordinput = document.querySelector("#ConfirmPassword");
+
+//Expresion regular
+const validationName = /^[a-zA-Z]+(?: [a-zA-Z]+)*$/;
+const validationPhone = /^\d{7,10}$/;
+const validationEmail = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+const validationPassword = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/g;
+
+function validName(name) {
+  if (!validationName.test(name.value)) {
+    name.classList.add("is-invalid");
+    name.classList.remove("is-valid");
+  } else{
+    name.classList.add("is-valid");
+    name.classList.remove("is-invalid");
+  }
+}
+
+function validPhone(phone) {
+  if (!validationPhone.test(phone.value)) {
+    phone.classList.add("is-invalid");
+    phone.classList.remove("is-valid");
+  } else{
+    phone.classList.add("is-valid");
+    phone.classList.remove("is-invalid");
+  }
+}
+
+function validEmail(email) {
+  if (!validationEmail.test(email.value)) {
+    email.classList.add("is-invalid");
+    email.classList.remove("is-valid");
+  } else{
+    email.classList.add("is-valid");
+    email.classList.remove("is-invalid");
+  }
+}
+
+function validPassword (password) {
+  if(!validationPassword.test(password.value)){
+    password.classList.add("is-invalid");
+    password.classList.remove("is-valid");
+  }
+  else{
+    password.classList.add("is-valid");
+    password.classList.remove("is-invalid");
+  }
+}
+
+function validConfirm (password, password2) {
+  if (!validationPassword.test(password2.value && password.value !== password2.value)) {
+    password2.classList.add("is-invalid");
+    password2.classList.remove("is-valid");
+  }
+  else{
+    password2.classList.add("is-valid");
+    password2.classList.remove("is-invalid")
+  }
+}
+
 (function () {
   "use strict";
 
@@ -11,58 +75,37 @@
     form.addEventListener(
       "submit",
       function (event) {
-        if (!form.checkValidity()) {
-          event.preventDefault();
-          event.stopPropagation();
-        } else {
-          console.log("no entra");
-        }
-
-        form.classList.add("was-validated");
+        event.preventDefault();
+        event.stopPropagation();
+        validName(nameInput);
+        validPhone(phoneInput);
+        validEmail(emailInput);
+        validPassword(newPassword);
+        validConfirm(newPassword, confirmPasswordinput);
       },
       false
     );
   });
-})();
+  nameInput.addEventListener('change', (e) => {
+    validName(nameInput);
+  })
 
-//Validating password inputs
-const newPassword = document.querySelector("#newPassword");
-const ConfirmPasswordinput = document.querySelector("#ConfirmPassword");
-const input1 = document.querySelector(".input-password1")
-const input2 = document.querySelector(".input-password2")
+  phoneInput.addEventListener('change', (e) => {
+    validPhone(phoneInput);
+  })
 
-const validation = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/g;
-
-const invalidFeed = document.querySelector('.invalid-feedback')
+  emailInput.addEventListener('change', (e) => {
+    validEmail(emailInput);
+  })
 
   newPassword.addEventListener('change', (e) => {
-   validPassword(input1)
+    validPassword(newPassword);
   })
 
-ConfirmPasswordinput.addEventListener('blur', (e) => {
-  validateConfirm(input1, input2)
+  confirmPasswordinput.addEventListener('change', (e) => {
+    validateConfirm(newPassword, confirmPasswordinput);
   })
-
-function validPassword (input) {
-  if(!validation.test(input.value)){
-    input.classList.add("is-invalid")
-    input.classList.remove("is-valid")
-  }
-  else{
-    input.classList.add("is-valid")
-    input.classList.remove("is-invalid")
-  }
-}
-function validateConfirm (password, password2) {
-  if (password.value !== password2.value) {
-    password2.classList.add("is-invalid")
-    password2.classList.remove("is-valid")
-  }
-  else{
-    password2.classList.add("is-valid")
-    password2.classList.remove("is-invalid")
-  }
-}
+})();
 
 
 
