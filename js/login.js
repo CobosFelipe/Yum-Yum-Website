@@ -27,14 +27,42 @@
 
 //Validating password inputs
 const newPassword = document.querySelector("#newPassword");
-const validity = newPassword.validity;
-console.log(validity);
-const ConfirmPassword = document.querySelector("#ConfirmPassword");
+const ConfirmPasswordinput = document.querySelector("#ConfirmPassword");
+const input1 = document.querySelector(".input-password1")
+const input2 = document.querySelector(".input-password2")
 
 const validation = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/g;
 
 const invalidFeed = document.querySelector('.invalid-feedback')
 
-  newPassword.addEventListener('blur', (e) => {
-})
+  newPassword.addEventListener('change', (e) => {
+   validPassword(input1)
+  })
+
+ConfirmPasswordinput.addEventListener('blur', (e) => {
+  validateConfirm(input1, input2)
+  })
+
+function validPassword (input) {
+  if(!validation.test(input.value)){
+    input.classList.add("is-invalid")
+    input.classList.remove("is-valid")
+  }
+  else{
+    input.classList.add("is-valid")
+    input.classList.remove("is-invalid")
+  }
+}
+function validateConfirm (password, password2) {
+  if (password.value !== password2.value) {
+    password2.classList.add("is-invalid")
+    password2.classList.remove("is-valid")
+  }
+  else{
+    password2.classList.add("is-valid")
+    password2.classList.remove("is-invalid")
+  }
+}
+
+
 
