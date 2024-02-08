@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito Sans", sans-serif;
+  --degradedBackground: linear-gradient(45deg, rgba(188, 112, 152, 0.95) 0%, rgba(255, 182, 185, 0.95) 100%);
+  --bone-white: #f6f3e4;
+  --black: #000000;
+  --yellow: #f6d169;
+  --pink: #ffb6b9;
+  --white: #ffffff;
+  --peach: #fdbda5;
+  --cherry: #bc7098;
+  --formBackground: linear-gradient(180deg, rgba(188, 112, 152, 0.95) -20%, rgba(255, 182, 185, 0.95) 100%);
+  box-sizing: border-box;
+}
+
+.conteiner-products{
+  width: 85vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  justify-items: center;
+  gap: 2rem;
+  align-content: center;
+  margin: auto;
+}
