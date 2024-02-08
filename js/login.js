@@ -53,7 +53,7 @@ function validPassword (password) {
 }
 
 function validConfirm (password, password2) {
-  if (!validationPassword.test(password2.value && password.value !== password2.value)) {
+  if (!validationPassword.test(password2.value) && password.value !== password2.value) {
     password2.classList.add("is-invalid");
     password2.classList.remove("is-valid");
   }
@@ -103,7 +103,7 @@ function validConfirm (password, password2) {
   })
 
   confirmPasswordinput.addEventListener('change', (e) => {
-    validateConfirm(newPassword, confirmPasswordinput);
+    validConfirm(newPassword, confirmPasswordinput);
   })
 })();
 
