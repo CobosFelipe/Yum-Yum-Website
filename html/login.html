@@ -44,7 +44,10 @@
       </nav>
       <!-- Inicio de sesión -->
       <form class="needs-validation mt-3" novalidate id="SignInFormData">
-        <div class="mb-4">
+        <div class="d-flex justify-content-center">
+          <img src="/img/anillo-de-bodas.png" width="100px">
+          </div>
+        <div class="mb-4 mt-4">
           <input class="form-control" type="email" id="username" placeholder="Email" required />
           <div class="valid-feedback">Se ve bien.</div>
           <div class="invalid-feedback">El correo no es valido o esta vacio.</div>
@@ -54,12 +57,12 @@
           <div class="valid-feedback">Se ve bien.</div>
           <div class="invalid-feedback">La contraseña no valida o esta vacia.</div>
         </div>
-        <button type="submit" title="Sing In">Iniciar sesión</button>
+        <button class="mt-4" type="submit" title="Sing In">Iniciar sesión</button>
         <a id="forgotPassword">¿Olvidaste tu contraseña?</a>
-        <div class="d-flex justify-content-evenly mt-3 mb-5 position-relative icon-container">
-          <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal"><img class="icon" src="/img/facebook icon.png" /></a>
-          <a href=""><img class="icon" src="/img/linkedin icon.png" /></a>
-          <a href=""><img class="icon" src="/img/twitter logo.png" /></a>
+        <div class="d-flex justify-content-evenly mt-5 mb-5 position-relative icon-container">
+          <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal"><img class="icon" src="/img/facebook icon.webp" /></a>
+          <a href=""><img class="icon" src="/img/linkedin icon.webp" /></a>
+          <a href=""><img class="icon" src="/img/twitter logo.webp" /></a>
         </div>
       </form>
       <!-- Registro -->
@@ -84,7 +87,7 @@
           <div class="valid-feedback">Se ve bien.</div>
           <div class="invalid-feedback">La contraseña debe contener al menos 8 caracteres</div>
         </div>
-        <div class="input-conteiner mb-4">
+        <div class="input-conteiner mb-2">
           <input class="form-control input-password2" type="password" id="ConfirmPassword" placeholder="Confirmar contraseña" required />
           <div class="valid-feedback">Se ve bien.</div>
           <div class="invalid-feedback">Las contraseñas no coinciden</div>
