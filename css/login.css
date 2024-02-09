@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -15,119 +15,125 @@
   box-sizing: border-box;
 }
 ::selection {
-	background: 0;
+  background: 0;
 }
 
 body {
-	height: 100vh;
-	display: grid;
-	place-content: center;
-	background: var(--formBackground)
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  background: var(--formBackground);
 }
 
 section {
-	min-height: 730px;
+  min-height: 730px;
   min-width: 380px;
-	padding: 15px;
-	box-shadow: var(--cherry);
-	border-radius: 10px;
-	background: var(--white) ;
-	overflow: hidden;
-	position: relative;
+  padding: 15px;
+  box-shadow: var(--cherry);
+  border-radius: 10px;
+  background: var(--white);
+  overflow: hidden;
+  position: relative;
+  /* Glass effect */
+  background: #ffffff6f;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  border: 1.5px solid rgba(209, 213, 219, 0.3);
 }
 
 #logo {
-	justify-content: center;
-	display: flex;
-	align-items: center;
-	margin: 15px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin: 1rem 1rem;
 }
 
 nav {
-	margin: 20px;
-	display: flex;
-	justify-content: center;
-	margin-bottom: 30px;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
 }
 
 nav label {
   font-size: 22px;
-	cursor: pointer;
+  cursor: pointer;
 }
 
 nav label:first-child {
-	margin-right: 20px;
+  margin-right: 20px;
 }
 
-.input-conteiner{
-	height: 4rem;
-	margin-bottom: .4rem;
+.input-conteiner {
+  height: 4rem;
+  margin-bottom: 0.4rem;
 }
 
 form {
-	position: absolute;
-	min-width: 300px;
-	transform: translatex(140%);
-	display: flex;
-	flex-direction: column;
-	transition: 0.3s;
+  position: absolute;
+  min-width: 80%;
+  transform: translatex(140%);
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s;
 }
 
 #SignIn:checked ~ section #SignInFormData,
 #SignUp:checked ~ section #SignUpFormData {
-	transform: translatex(10%);
+  transform: translatex(10%);
 }
 
 #SignIn:checked ~ section nav label:first-child,
 #SignUp:checked ~ section nav label:last-child {
-	margin-bottom: -2px;
-	border-bottom: 2px solid var(--pink);
+  margin-bottom: -2px;
+  border-bottom: 2px solid var(--cherry);
 }
 
-input,
-button {
-	color: var(--black);
-	border-radius: 8px !important;
-	padding: 15px 20px;
-	border: none;
-	outline: none;
-	font-size: 16px;
-	box-shadow: rgba(0, 0, 0, 0.35) 0px 0px  10px;
+input {
+  color: var(--black);
+  border-radius: 8px !important;
+  border: none;
+  outline: none;
+  font-size: 16px;
+	background: #ffffff91!important;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 4px 3px;
 }
 
 button {
-	background: var(--black);
-	font-weight: bold;
-	color: var(--white);
-	cursor: pointer;
-	margin-top: 5px;
-    font-size: 20px;
+  color: var(--white);
+  border-radius: 8px !important;
+  padding: 0.5rem 1rem;
+  background: var(--black);
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 5px;
+  font-size: 20px !important;
+  margin-bottom: 2rem !important;
 }
 
 a {
-	font-weight: bold;
-	text-decoration: none;
-	margin-top: 20px;
-	cursor: pointer;
-	text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
 }
-.logos{
-    display: flex;
+.logos {
+  display: flex;
 }
-.icon{
+.icon {
   width: 40px;
 }
- /*RESPONSIVE DESING*/
- @media screen and (min-width: 740px){
-    section{
-        min-width: 490px;
-        min-height: 700px;
-    }
-    #SignIn:checked ~ section #SignInFormData,
-#SignUp:checked ~ section #SignUpFormData {
-	transform: translatex(15%);
-}
-form{
+/*RESPONSIVE DESING*/
+@media screen and (min-width: 740px) {
+  section {
+    min-width: 490px;
+    min-height: 700px;
+  }
+  #SignIn:checked ~ section #SignInFormData,
+  #SignUp:checked ~ section #SignUpFormData {
+    transform: translatex(15%);
+  }
+  form {
     min-width: 350px;
+  }
 }
- }
