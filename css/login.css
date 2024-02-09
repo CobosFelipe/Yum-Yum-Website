@@ -22,9 +22,77 @@ body {
 	height: 100vh;
 	display: grid;
 	place-content: center;
-	background: var(--formBackground)
+}
+body {
+    margin: auto;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow: auto;
+    background: linear-gradient(315deg, rgba(187, 97, 145, 0.95) 3%,rgba(250, 166, 168, 0.95) 38%,  rgb(223, 175, 196) 98%);
+    animation: gradient 25s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+
 }
 
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.wave {
+    background: rgba(255, 255, 255, 0.26);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 12em;
+    animation: wave 20s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.6;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.6;
+}
+
+.wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.6;
+}
+
+@keyframes wave {
+    2% {
+        transform: translateX(1);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(1);
+    }
+} 
 section {
 	min-height: 730px;
   min-width: 380px;
@@ -34,6 +102,10 @@ section {
 	background: var(--white) ;
 	overflow: hidden;
 	position: relative;
+	background: #ffffff90;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  border: 1.5px solid rgba(209, 213, 219, 0.3);
 }
 
 #logo {
