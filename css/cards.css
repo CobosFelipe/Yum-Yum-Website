@@ -11,16 +11,8 @@
   --peach: #fdbda5;
   --white: #ffffff;
 }
-body {
-  background: linear-gradient(-45deg, #eeb6ff, #fcb1ff, #a5dbfd, #eeb6ff, #fcb1ff, #a5dbfd);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
-}
 .profile {
-  justify-content: center;
-  width: 95vw;
   padding: 2rem 2rem;
-  margin: auto;
   border-radius: 2rem;
   /* Glass effect */
   background: #ffffff41;
@@ -31,7 +23,6 @@ body {
 
 .cards {
   gap: 15px;
-  margin-bottom: 40px;
 }
 
 .imgCard {
@@ -141,12 +132,12 @@ body {
   }
 }
 
-@media screen and (min-width: 740px) {
+@media screen and (min-width: 940px) {
   .profile {
     align-items: center;
     width: 80vw;
+    margin: auto;
     padding: 3rem 2rem;
-    margin: 5rem 7rem;
     border-radius: 2rem;
   }
 }

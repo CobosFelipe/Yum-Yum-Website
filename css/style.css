@@ -12,6 +12,11 @@
     --peach : #FDBDA5;
     --cherry : #BC7098;
 }
+main {
+    background: linear-gradient(-45deg, #eeb6ff, #dfbaff, #a5dbfd);
+    background-size: 400% 400%;
+    animation: gradient 8s ease infinite;
+}
 /*Header section*/
 .logo {
     position: absolute;

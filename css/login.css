@@ -21,9 +21,6 @@
 body {
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(-45deg, #eeb6ff, #fcb1ff, #a5dbfd, #eeb6ff, #fcb1ff, #a5dbfd);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
   display: grid;
   place-content: center;
 }
@@ -143,7 +140,7 @@ a {
 }
 
 /*RESPONSIVE DESING*/
-@media screen and (min-width: 740px) {
+@media screen and (min-width: 940px) {
   section {
     min-width: 490px;
     min-height: 700px;
