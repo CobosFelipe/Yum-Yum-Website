@@ -4,12 +4,16 @@ const phoneInput = document.getElementById("phone");
 const emailInput = document.getElementById("email");
 const newPassword = document.querySelector("#newPassword");
 const confirmPasswordinput = document.querySelector("#ConfirmPassword");
+const passwordLogin = document.getElementById("password");
+const emailLoginInput = document.getElementById("username");
 
 //Expresion regular
 const validationName = /^[a-zA-Z]+(?: [a-zA-Z]+)*$/;
 const validationPhone = /^\d{7,10}$/;
 const validationEmail = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 const validationPassword = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/g;
+const validationEmailLogin =/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
 
 function validName(name) {
   if (!validationName.test(name.value)) {
@@ -19,7 +23,7 @@ function validName(name) {
     name.classList.add("is-valid");
     name.classList.remove("is-invalid");
   }
-}
+} 
 
 function validPhone(phone) {
   if (!validationPhone.test(phone.value)) {
@@ -62,6 +66,16 @@ function validConfirm (password, password2) {
     password2.classList.remove("is-invalid")
   }
 }
+function validEmailLogin(EmailLogin) {
+  if (!validationEmailLogin.test(EmailLogin.value)) {
+    EmailLogin.classList.add("is-invalid");
+    EmailLogin.classList.remove("is-valid");
+  } else{
+    EmailLogin.classList.add("is-valid");
+    EmailLogin.classList.remove("is-invalid");
+  }
+}
+
 
 (function () {
   "use strict";
@@ -82,6 +96,8 @@ function validConfirm (password, password2) {
         validEmail(emailInput);
         validPassword(newPassword);
         validConfirm(newPassword, confirmPasswordinput);
+        validPassword(passwordLogin);
+        validEmailLogin(emailLoginInput);
       },
       false
     );
@@ -100,6 +116,12 @@ function validConfirm (password, password2) {
 
   newPassword.addEventListener('change', (e) => {
     validPassword(newPassword);
+  })
+  emailLoginInput.addEventListener('change', (e) => {
+    validEmailLogin(emailLoginInput);
+  })
+  passwordLogin.addEventListener('change', (e) => {
+    validPassword(passwordLogin);
   })
 
   confirmPasswordinput.addEventListener('change', (e) => {
