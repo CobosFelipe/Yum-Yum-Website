@@ -21,23 +21,11 @@
 body {
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(-45deg, #eeb6ff, #fdbda5, #f66e69, #a5dbfd);
+  background: linear-gradient(-45deg, #eeb6ff, #fcb1ff, #a5dbfd, #eeb6ff, #fcb1ff, #a5dbfd);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   display: grid;
   place-content: center;
-}
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }
 
 section {
@@ -108,10 +96,13 @@ input {
   color: var(--black);
   border-radius: 8px !important;
   border: none;
-  outline: none;
   font-size: 16px;
-  background: #ffffff91 !important;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 4px 3px;
+  background: #ffffff69 !important;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 4px 3px!important;
+}
+
+input :focus{
+  outline: none!important;
 }
 
 button {
@@ -137,6 +128,18 @@ a {
 }
 .icon {
   width: 40px;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /*RESPONSIVE DESING*/
