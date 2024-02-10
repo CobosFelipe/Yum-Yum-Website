@@ -1,0 +1,94 @@
+{
+  "Products": [
+    {
+      "id": 1,
+      "title": "Aretes rosa",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis at harum odit enim aliquam. Harum error at quos libero consectetur porro labore, illum, doloremque iusto, placeat maiores nostrum ab voluptatum",
+      "color": "rosa",
+      "price": 20000,
+      "stock": 500,
+      "imageUrl": "https://tiendadivinamujer.com/wp-content/uploads/2022/12/download-all-images-download-main-image-do_main-4.jpg"
+    },
+    {
+      "id": 2,
+      "title": "manillas neon",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis at harum odit enim aliquam. Harum error at quos libero consectetur porro labore, illum, doloremque iusto, placeat maiores nostrum ab voluptatum",
+      "color": "rosa",
+      "price": 30000,
+      "stock": 500,
+      "imageUrl": "https://images.pexels.com/photos/266621/pexels-photo-266621.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": 3,
+      "title": "Earcuff chunky",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis at harum odit enim aliquam. Harum error at quos libero consectetur porro labore, illum, doloremque iusto, placeat maiores nostrum ab voluptatum",
+      "color": "rosa",
+      "price": 10000,
+      "stock": 500,
+      "imageUrl": "https://whimsofgirls.com/10329-large_default/earcuff-chunky-de-rodio-x-unad.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Llavero de dados",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis at harum odit enim aliquam. Harum error at quos libero consectetur porro labore, illum, doloremque iusto, placeat maiores nostrum ab voluptatum",
+      "color": "rosa",
+      "price": 15000,
+      "stock": 500,
+      "imageUrl": "https://images.pexels.com/photos/1194036/pexels-photo-1194036.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": 5,
+      "title": "Anillo de osito",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis at harum odit enim aliquam. Harum error at quos libero consectetur porro labore, illum, doloremque iusto, placeat maiores nostrum ab voluptatum",
+      "color": "rosa",
+      "price": 20000,
+      "stock": 500,
+      "imageUrl": "https://images.pexels.com/photos/68900/pexels-photo-68900.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": 6,
+      "title": "Collar heart",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis at harum odit enim aliquam. Harum error at quos libero consectetur porro labore, illum, doloremque iusto, placeat maiores nostrum ab voluptatum",
+      "color": "rosa",
+      "price": 30000,
+      "stock": 500,
+      "imageUrl": "https://images.pexels.com/photos/860009/pexels-photo-860009.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": 7,
+      "title": "Chocker personalizado",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis at harum odit enim aliquam. Harum error at quos libero consectetur porro labore, illum, doloremque iusto, placeat maiores nostrum ab voluptatum",
+      "color": "rosa",
+      "price": 25000,
+      "stock": 500,
+      "imageUrl": "https://citrineaccesorios.com/cdn/shop/products/Chockerfrutal2.jpg?v=1668889123&width=1445"
+    },
+    {
+      "id": 8,
+      "title": "Porta carnet Harry Potter",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis at harum odit enim aliquam. Harum error at quos libero consectetur porro labore, illum, doloremque iusto, placeat maiores nostrum ab voluptatum",
+      "color": "rosa",
+      "price": 10000,
+      "stock": 500,
+      "imageUrl": "https://http2.mlstatic.com/D_NQ_NP_980855-MCO49749313342_042022-O.webp"
+    },
+    {
+      "id": 9,
+      "title": "Aretes chupeta de corazón",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis at harum odit enim aliquam. Harum error at quos libero consectetur porro labore, illum, doloremque iusto, placeat maiores nostrum ab voluptatum",
+      "color": "rosa",
+      "price": 20000,
+      "stock": 500,
+      "imageUrl": "https://media.istockphoto.com/id/1209614213/es/foto/pendientes-de-perno-de-oro-rosa-en-forma-de-corazones-sobre-fondo-rosa.jpg?s=612x612&w=0&k=20&c=XdVPafqsmYp2IVcuQxeNABHkue4CL574JfugQumTxy8="
+    },
+    {
+      "id": 10,
+      "title": "Candongas personalizadas",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis at harum odit enim aliquam. Harum error at quos libero consectetur porro labore, illum, doloremque iusto, placeat maiores nostrum ab voluptatum",
+      "color": "rosa",
+      "price": 25000,
+      "stock": 500,
+      "imageUrl": "https://res.cloudinary.com/dvun7eeq1/image/upload/v1706200502/aretes_z5dcwj.jpg"
+    }
+  ]
+}
