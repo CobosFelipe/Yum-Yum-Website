@@ -1,8 +1,12 @@
-// Capturar los elementos inputs
+// Capturar los elementos inputs del form inicio de sesión
+const loginEmailInput = document.getElementById("username");
+const loginPasswordInput = document.getElementById("password");
+
+// Capturar los elementos inputs del form registro
 const nameInput = document.getElementById("name");
 const phoneInput = document.getElementById("phone");
 const emailInput = document.getElementById("email");
-const newPassword = document.querySelector("#newPassword");
+const newPasswordInput = document.querySelector("#newPassword");
 const confirmPasswordinput = document.querySelector("#ConfirmPassword");
 
 //Expresion regular
@@ -80,32 +84,32 @@ function validConfirm (password, password2) {
         validName(nameInput);
         validPhone(phoneInput);
         validEmail(emailInput);
-        validPassword(newPassword);
-        validConfirm(newPassword, confirmPasswordinput);
+        validPassword(newPasswordInput);
+        validConfirm(newPasswordInput, confirmPasswordinput);
       },
       false
     );
   });
-  nameInput.addEventListener('change', (e) => {
+  nameInput.addEventListener('input', () => {
     validName(nameInput);
   })
 
-  phoneInput.addEventListener('change', (e) => {
+  phoneInput.addEventListener('input', () => {
     validPhone(phoneInput);
   })
 
-  emailInput.addEventListener('change', (e) => {
+  emailInput.addEventListener('input', () => {
     validEmail(emailInput);
   })
 
-  newPassword.addEventListener('change', (e) => {
-    validPassword(newPassword);
+  newPasswordInput.addEventListener('input', () => {
+    validPassword(newPasswordInput);
   })
 
-  confirmPasswordinput.addEventListener('change', (e) => {
-    validConfirm(newPassword, confirmPasswordinput);
+  confirmPasswordinput.addEventListener('input', () => {
+    validConfirm(newPasswordInput, confirmPasswordinput);
   })
 })();
 
-
+// Acá podría empezar la validacion del login
 
