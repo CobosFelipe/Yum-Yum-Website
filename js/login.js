@@ -109,10 +109,25 @@ signInForm.addEventListener('submit', function(event) {
     const usuarioExistente = usuariosAlmacenados.find(user => user.email === loginEmailInput.value && user.password === loginPasswordInput.value)
     //Condicional para mostrar al usuario si su ingreso fue exitoso o no
     if (usuarioExistente) {
-      console.log("El usuario ha iniciado sesión exitosamente!");
-      window.location.href = "../index.html"
+      setTimeout(() => {
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "Se ha iniciado sesión exitosamente",
+          showConfirmButton: false,
+          timer: 2500,
+        });
+        window.location.href = "../index.html"
+      }, "3500");
+     
     } else{
-      console.log("El usuario no existe, registrate");
+      Swal.fire({
+        position: "center",
+        icon: "error",
+        title: "El usuario no existe, por favor registrelo",
+        showConfirmButton: false,
+        timer: 2500,
+      });
     }
   }
 })
