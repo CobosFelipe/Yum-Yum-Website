@@ -45,7 +45,7 @@ function getProducts() {
       fillProductsDiv(json.Products);
     })
     .catch((error) => {
-      console.log("Error consumiendo la api");
+      console.log("Error consumiendo la api: " + error);
     });
 }
 
