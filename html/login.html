@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/login.css" />
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
     <!-- CSS -->
     <link
@@ -27,11 +28,7 @@
     <title>Yum Yum</title>
   </head>
   <body>
-     <div>
-         <div class="wave"></div>
-         <div class="wave"></div>
-         <div class="wave"></div>
-      </div> 
+    <main>
     <input type="radio" name="optionScreen" id="SignIn" hidden checked />
     <input type="radio" name="optionScreen" id="SignUp" hidden />
     <section>
@@ -47,17 +44,17 @@
         <div class="d-flex justify-content-center">
           <img src="/img/anillo-de-bodas.png" width="100px">
           </div>
-        <div class="mb-4 mt-4">
+        <div class="input-container mt-4">
           <input class="form-control" type="email" id="username" placeholder="Email" required />
           <div class="valid-feedback">Se ve bien.</div>
           <div class="invalid-feedback">El correo no es valido o esta vacio.</div>
         </div>
-        <div class="mb-4">
+        <div class="input-container">
           <input class="form-control" type="password" id="password" placeholder="Contraseña" required />
           <div class="valid-feedback">Se ve bien.</div>
           <div class="invalid-feedback">La contraseña no valida o esta vacia.</div>
         </div>
-        <button class="mt-4" type="submit" title="Sing In">Iniciar sesión</button>
+        <button class="mt-2" type="submit" title="Sing In">Iniciar sesión</button>
         <a id="forgotPassword">¿Olvidaste tu contraseña?</a>
         <div class="d-flex justify-content-evenly mt-5 mb-5 position-relative icon-container">
           <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal"><img class="icon" src="/img/facebook icon.webp" /></a>
@@ -67,39 +64,40 @@
       </form>
       <!-- Registro -->
       <form class="needs-validation" novalidate id="SignUpFormData">
-        <div class="input-conteiner">
+        <div class="input-container">
           <input class="form-control" type="text" id="name" placeholder="Nombre Completo" pattern="" required />
           <div class="valid-feedback">Se ve bien.</div>
           <div class="invalid-feedback">El nombre que ingresaste no es valido.</div>
         </div>
-        <div class="input-conteiner">
+        <div class="input-container">
           <input class="form-control" type="number" id="phone" placeholder="Celular" required />
           <div class="valid-feedback">Se ve bien.</div>
           <div class="invalid-feedback">El campo no es válido</div>
         </div>
-        <div class="input-conteiner">
+        <div class="input-container">
           <input class="form-control" type="email" id="email" placeholder="E-mail" required />
           <div class="valid-feedback">Se ve bien.</div>
           <div class="invalid-feedback">El correo no es valido o esta vacio.</div>
         </div>
-        <div class="input-conteiner">
+        <div class="input-container">
           <input class="form-control input-password1" type="password" id="newPassword" placeholder="Contraseña" required />
           <div class="valid-feedback">Se ve bien.</div>
           <div class="invalid-feedback">La contraseña debe contener al menos 8 caracteres</div>
         </div>
-        <div class="input-conteiner mb-2">
+        <div class="input-container mb-2">
           <input class="form-control input-password2" type="password" id="ConfirmPassword" placeholder="Confirmar contraseña" required />
           <div class="valid-feedback">Se ve bien.</div>
           <div class="invalid-feedback">Las contraseñas no coinciden</div>
         </div>
         <button type="submit" title="Sing Up">Registrarse</button>
         <div class="d-flex justify-content-evenly mt-1 mb-5 position-relative icon-container">
-          <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal"><img class="icon" src="/img/facebook icon.png" /></a>
-          <a href=""><img class="icon" src="/img/linkedin icon.png" /></a>
-          <a href=""><img class="icon" src="/img/twitter logo.png" /></a>
+          <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal"><img class="icon" src="/img/facebook icon.webp" /></a>
+          <a href=""><img class="icon" src="/img/linkedin icon.webp" /></a>
+          <a href=""><img class="icon" src="/img/twitter logo.webp" /></a>
         </div>
       </form>
     </section>
+    </main>
     <script src="/js/login.js"></script>
   </body>
 </html>

@@ -1,11 +1,29 @@
-// Capturar los elementos inputs
+//Capturar los form
+const signInForm = document.getElementById("SignInFormData");
+const signUpForm = document.getElementById("SignUpFormData");
+
+//Capturar los elementos inputs del form inicio de sesión
+const loginEmailInput = document.getElementById("username");
+const loginPasswordInput = document.getElementById("password");
+
+//Capturar los elementos inputs del form registro
 const nameInput = document.getElementById("name");
 const phoneInput = document.getElementById("phone");
 const emailInput = document.getElementById("email");
-const newPassword = document.querySelector("#newPassword");
+const newPasswordInput = document.querySelector("#newPassword");
 const confirmPasswordinput = document.querySelector("#ConfirmPassword");
-const passwordLogin = document.getElementById("password");
-const emailLoginInput = document.getElementById("username");
+
+//LocalStorage
+const usersJson = "http://127.0.0.1:5500/json/users.json";
+const nombreVariable = []; 
+fetch(usersJson)
+  .then((response) => response.json())
+  .then((data) => {
+    localStorage.setItem('usuarios',JSON.stringify(data.Users));
+  })
+  .catch((error) => {
+    console.log("error consumiendo la api");
+});
 
 //Expresion regular
 const validationName = /^[a-zA-Z]+(?: [a-zA-Z]+)*$/;
@@ -39,9 +57,11 @@ function validEmail(email) {
   if (!validationEmail.test(email.value)) {
     email.classList.add("is-invalid");
     email.classList.remove("is-valid");
+    return false;
   } else{
     email.classList.add("is-valid");
     email.classList.remove("is-invalid");
+    return true;
   }
 }
 
@@ -49,10 +69,12 @@ function validPassword (password) {
   if(!validationPassword.test(password.value)){
     password.classList.add("is-invalid");
     password.classList.remove("is-valid");
+    return false;
   }
   else{
     password.classList.add("is-valid");
     password.classList.remove("is-invalid");
+    return true;
   }
 }
 
@@ -66,69 +88,61 @@ function validConfirm (password, password2) {
     password2.classList.remove("is-invalid")
   }
 }
-function validEmailLogin(EmailLogin) {
-  if (!validationEmailLogin.test(EmailLogin.value)) {
-    EmailLogin.classList.add("is-invalid");
-    EmailLogin.classList.remove("is-valid");
-  } else{
-    EmailLogin.classList.add("is-valid");
-    EmailLogin.classList.remove("is-invalid");
+//Validaciones formulario de registro
+signUpForm.addEventListener('submit', function(event) {
+  event.preventDefault();
+  event.stopPropagation();
+  validName(nameInput);
+  validPhone(phoneInput);
+  validEmail(emailInput);
+  validPassword(newPasswordInput);
+  validConfirm(newPasswordInput, confirmPasswordinput);
+})
+//Validaciones formulario de inicio de sesión
+signInForm.addEventListener('submit', function(event) {
+  event.preventDefault();
+  event.stopPropagation();
+  validEmail(username);
+  validPassword(password);
+  if (validEmail(username) && validPassword(password)) {
+    const usuariosAlmacenados = JSON.parse(localStorage.getItem('usuarios')) || [];
+    const usuarioExistente = usuariosAlmacenados.find(user => user.email === loginEmailInput.value && user.password === loginPasswordInput.value)
+    //Condicional para mostrar al usuario si su ingreso fue exitoso o no
+    if (usuarioExistente) {
+      console.log("El usuario ha iniciado sesión exitosamente!");
+      window.location.href = "../index.html"
+    } else{
+      console.log("El usuario no existe, registrate");
+    }
   }
-}
+})
 
+//EvenListener inputs inicio de sesión
+username.addEventListener('input', () => {
+  validEmail(username);
+})
+password.addEventListener('input', () => {
+  validPassword(password);
+})
 
-(function () {
-  "use strict";
+//EventListener inputs registro
+nameInput.addEventListener('input', () => {
+  validName(nameInput);
+})
 
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  var forms = document.querySelectorAll(".needs-validation");
-  
+phoneInput.addEventListener('input', () => {
+  validPhone(phoneInput);
+})
 
-  // Loop over them and prevent submission
-  Array.prototype.slice.call(forms).forEach(function (form) {
-    form.addEventListener(
-      "submit",
-      function (event) {
-        event.preventDefault();
-        event.stopPropagation();
-        validName(nameInput);
-        validPhone(phoneInput);
-        validEmail(emailInput);
-        validPassword(newPassword);
-        validConfirm(newPassword, confirmPasswordinput);
-        validPassword(passwordLogin);
-        validEmailLogin(emailLoginInput);
-      },
-      false
-    );
-  });
-  nameInput.addEventListener('change', (e) => {
-    validName(nameInput);
-  })
+emailInput.addEventListener('input', () => {
+  validEmail(emailInput);
+})
 
-  phoneInput.addEventListener('change', (e) => {
-    validPhone(phoneInput);
-  })
+newPasswordInput.addEventListener('input', () => {
+  validPassword(newPasswordInput);
+})
 
-  emailInput.addEventListener('change', (e) => {
-    validEmail(emailInput);
-  })
-
-  newPassword.addEventListener('change', (e) => {
-    validPassword(newPassword);
-  })
-  emailLoginInput.addEventListener('change', (e) => {
-    validEmailLogin(emailLoginInput);
-  })
-  passwordLogin.addEventListener('change', (e) => {
-    validPassword(passwordLogin);
-  })
-
-  confirmPasswordinput.addEventListener('change', (e) => {
-    validConfirm(newPassword, confirmPasswordinput);
-  })
-})();
-
- 
-
+confirmPasswordinput.addEventListener('input', () => {
+  validConfirm(newPasswordInput, confirmPasswordinput);
+})
 

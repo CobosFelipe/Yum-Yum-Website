@@ -12,22 +12,43 @@
   --cherry: #bc7098;
   --formBackground: linear-gradient(180deg, rgba(188, 112, 152, 0.95) -20%, rgba(255, 182, 185, 0.95) 100%);
 }
-.div-form{
-  background: var(--formBackground);
-}
 .card{
   border-radius: 20px !important;
   width: 90vw;
   margin: 2rem 0;
+  background: #ffffff41!important;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  border: 1.5px solid rgba(209, 213, 219, 0.3);
 }
 form{
   width: 80%;
 }
+input, textarea {
+  color: var(--black);
+  border-radius: 8px !important;
+  border: none;
+  font-size: 16px;
+  background: #ffffff69 !important;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 4px 3px!important;
+}
 .btnSubmit{
-  width: 20vh;
+  width: 25vh;
+  font-size: 20px !important;
 }
 .logo-send-image{
   display: none;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 @media screen and (min-width: 940px) {
   .card{

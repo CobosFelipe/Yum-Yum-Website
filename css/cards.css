@@ -8,19 +8,26 @@
   --black: #000000;
   --yellow: #f6d169;
   --pink: #ffb6b9;
-  --peach : #FDBDA5;
+  --peach: #fdbda5;
   --white: #ffffff;
 }
+.profile {
+  padding: 2rem 2rem;
+  border-radius: 2rem;
+  /* Glass effect */
+  background: #ffffff41;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  border: 1.5px solid rgba(209, 213, 219, 0.3);
+}
 
-.cards{
+.cards {
   gap: 15px;
-  margin-bottom: 40px;
 }
 
 .imgCard {
   width: 210px;
   border-radius: 1em;
-  margin-top: -10px;
 }
 
 .myCard {
@@ -73,6 +80,11 @@
 .backSide::before {
   border: 2px solid var(--pink);
   padding: 5px;
+  /* Glass effect */
+  background: #ffffff30;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  border: 1.5px solid rgba(209, 213, 219, 0.3);
 }
 
 .backSide {
@@ -105,5 +117,27 @@
 
   100% {
     opacity: 0.3;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@media screen and (min-width: 940px) {
+  .profile {
+    align-items: center;
+    width: 80vw;
+    margin: auto;
+    padding: 3rem 2rem;
+    border-radius: 2rem;
   }
 }
