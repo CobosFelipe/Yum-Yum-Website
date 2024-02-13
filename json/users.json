@@ -1,17 +1,14 @@
 {
   "Users":[
     {
-      "id": 1,
       "email": "user0@email.com",
       "password": "Loquequi3ras*"
     },
     {
-      "id": 2,
       "email": "user1@email.com",
       "password": "Loquequi3ras*"
     },
     {
-      "id": 3,
       "email": "user2@email.com",
       "password": "Loquequi3ras*"
     }
