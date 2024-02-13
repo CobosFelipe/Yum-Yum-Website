@@ -15,8 +15,8 @@ const confirmPasswordinput = document.querySelector("#ConfirmPassword");
 
 //LocalStorage
 const usersJson = "http://127.0.0.1:5500/json/users.json";
-const nombreVariable = []; 
-fetch(usersJson)
+if (!localStorage.getItem("usuarios")){
+  fetch(usersJson)
   .then((response) => response.json())
   .then((data) => {
     localStorage.setItem('usuarios',JSON.stringify(data.Users));
@@ -24,12 +24,13 @@ fetch(usersJson)
   .catch((error) => {
     console.log("error consumiendo la api");
 });
+}
 
 //Expresion regular
 const validationName = /^[a-zA-Z]+(?: [a-zA-Z]+)*$/;
 const validationPhone = /^\d{7,10}$/;
 const validationEmail = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-const validationPassword = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/g;
+const validationPassword = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;
 const validationEmailLogin =/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
 
@@ -97,19 +98,47 @@ signUpForm.addEventListener('submit', function(event) {
   validEmail(emailInput);
   validPassword(newPasswordInput);
   validConfirm(newPasswordInput, confirmPasswordinput);
+  if(validEmail(emailInput) && validPassword(newPasswordInput)){
+    const usuariosAlmacenados = JSON.parse(localStorage.getItem('usuarios')) || [];
+    usuariosAlmacenados.push({
+      email: emailInput.value,
+      password: newPasswordInput.value,
+    });
+    localStorage.setItem("usuarios", JSON.stringify(usuariosAlmacenados));
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "Se ha registado exitosamente",
+      showConfirmButton: false,
+      timer: 2500,
+    });
+    setTimeout(() => {
+      window.location.href = "/html/login.html"
+    },"1000");
+    
+  }
+  else{
+    Swal.fire({
+      position: "center",
+      icon: "error",
+      title: "No se pudo realizar el registro, intente de nuevo",
+      showConfirmButton: false,
+      timer: 2500,
+    });
+  }
 })
+
 //Validaciones formulario de inicio de sesión
 signInForm.addEventListener('submit', function(event) {
   event.preventDefault();
   event.stopPropagation();
-  validEmail(username);
-  validPassword(password);
-  if (validEmail(username) && validPassword(password)) {
+  validEmail(loginEmailInput);
+  validPassword(loginPasswordInput);
+  if (validEmail(loginEmailInput) && validPassword(loginPasswordInput)) {
     const usuariosAlmacenados = JSON.parse(localStorage.getItem('usuarios')) || [];
     const usuarioExistente = usuariosAlmacenados.find(user => user.email === loginEmailInput.value && user.password === loginPasswordInput.value)
     //Condicional para mostrar al usuario si su ingreso fue exitoso o no
     if (usuarioExistente) {
-      setTimeout(() => {
         Swal.fire({
           position: "center",
           icon: "success",
@@ -117,14 +146,15 @@ signInForm.addEventListener('submit', function(event) {
           showConfirmButton: false,
           timer: 2500,
         });
+      setTimeout(() => {
         window.location.href = "../index.html"
-      }, "3500");
-     
+      },"3500");
+      
     } else{
       Swal.fire({
         position: "center",
         icon: "error",
-        title: "El usuario no existe, por favor registrelo",
+        title: "El usuario no existe,",
         showConfirmButton: false,
         timer: 2500,
       });
@@ -133,11 +163,11 @@ signInForm.addEventListener('submit', function(event) {
 })
 
 //EvenListener inputs inicio de sesión
-username.addEventListener('input', () => {
-  validEmail(username);
+loginEmailInput.addEventListener('input', () => {
+  validEmail(loginEmailInput);
 })
-password.addEventListener('input', () => {
-  validPassword(password);
+loginPasswordInput.addEventListener('input', () => {
+  validPassword(loginPasswordInput);
 })
 
 //EventListener inputs registro
