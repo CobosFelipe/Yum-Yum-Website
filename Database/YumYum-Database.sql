@@ -5,45 +5,35 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
 -- -----------------------------------------------------
--- Schema YumYum-Database
+-- Schema mydb
+-- -----------------------------------------------------
+-- -----------------------------------------------------
+-- Schema yumyum-database
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Schema YumYum-Database
+-- Schema yumyum-database
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `YumYum-Database` DEFAULT CHARACTER SET utf8 ;
-USE `YumYum-Database` ;
+CREATE SCHEMA IF NOT EXISTS `yumyum-database` DEFAULT CHARACTER SET utf8mb3 ;
+USE `yumyum-database` ;
 
 -- -----------------------------------------------------
--- Table `YumYum-Database`.`users`
+-- Table `yumyum-database`.`categories`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `YumYum-Database`.`users` (
-  `idusers` INT NOT NULL AUTO_INCREMENT,
-  `name` VARCHAR(45) NOT NULL,
-  `phone` VARCHAR(45) NOT NULL,
-  `email` VARCHAR(45) NOT NULL,
-  `password` VARCHAR(45) NOT NULL,
-  `role` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`idusers`))
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `YumYum-Database`.`categories`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `YumYum-Database`.`categories` (
+CREATE TABLE IF NOT EXISTS `yumyum-database`.`categories` (
   `idcategories` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
   `description` VARCHAR(45) NOT NULL,
   `url_img` VARCHAR(100) NOT NULL,
   PRIMARY KEY (`idcategories`))
-ENGINE = InnoDB;
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb3;
 
 
 -- -----------------------------------------------------
--- Table `YumYum-Database`.`products`
+-- Table `yumyum-database`.`products`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `YumYum-Database`.`products` (
+CREATE TABLE IF NOT EXISTS `yumyum-database`.`products` (
   `idproducts` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
   `decription` VARCHAR(45) NOT NULL,
@@ -57,34 +47,46 @@ CREATE TABLE IF NOT EXISTS `YumYum-Database`.`products` (
   INDEX `fk_products_categories1_idx` (`categories_idcategories` ASC) VISIBLE,
   CONSTRAINT `fk_products_categories1`
     FOREIGN KEY (`categories_idcategories`)
-    REFERENCES `YumYum-Database`.`categories` (`idcategories`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+    REFERENCES `yumyum-database`.`categories` (`idcategories`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb3;
 
 
 -- -----------------------------------------------------
--- Table `YumYum-Database`.`cart`
+-- Table `yumyum-database`.`users`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `YumYum-Database`.`cart` (
+CREATE TABLE IF NOT EXISTS `yumyum-database`.`users` (
+  `idusers` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NOT NULL,
+  `phone` VARCHAR(45) NOT NULL,
+  `email` VARCHAR(45) NOT NULL,
+  `password` VARCHAR(45) NOT NULL,
+  `role` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`idusers`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb3;
+
+
+-- -----------------------------------------------------
+-- Table `yumyum-database`.`cart`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `yumyum-database`.`cart` (
+  `idcart` INT NOT NULL AUTO_INCREMENT,
   `products_idproducts` INT NOT NULL,
   `users_idusers` INT NOT NULL,
   `total_price` DOUBLE NOT NULL,
   `amount` INT NOT NULL,
-  PRIMARY KEY (`products_idproducts`, `users_idusers`),
+  PRIMARY KEY (`idcart`, `products_idproducts`, `users_idusers`),
   INDEX `fk_products_has_users_users1_idx` (`users_idusers` ASC) VISIBLE,
   INDEX `fk_products_has_users_products_idx` (`products_idproducts` ASC) VISIBLE,
   CONSTRAINT `fk_products_has_users_products`
     FOREIGN KEY (`products_idproducts`)
-    REFERENCES `YumYum-Database`.`products` (`idproducts`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    REFERENCES `yumyum-database`.`products` (`idproducts`),
   CONSTRAINT `fk_products_has_users_users1`
     FOREIGN KEY (`users_idusers`)
-    REFERENCES `YumYum-Database`.`users` (`idusers`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+    REFERENCES `yumyum-database`.`users` (`idusers`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb3;
 
 
 SET SQL_MODE=@OLD_SQL_MODE;
