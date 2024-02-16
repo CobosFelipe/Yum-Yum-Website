@@ -61,7 +61,7 @@ function fillProductsDiv(json) {
     </div>
     `;
   }
-  document.getElementById("products1").innerHTML = card;
+  document.getElementById("products").innerHTML = card;
 }
 
 getProducts();

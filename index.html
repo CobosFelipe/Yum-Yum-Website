@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon" />
     <!-- CSS -->
     <link
       rel="stylesheet"
@@ -25,7 +26,6 @@
     ></script>
     <title>Yum Yum</title>
   </head>
-
   <body>
     <header class="header">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -69,17 +69,88 @@
         </div>
       </nav>
     </header>
-    <main>
-      <div class="img">
-        <img src="/img/Pagina_en_construccion.jpg" alt="Pagina_en_construccion" />
+    <main class="mainBackground">
+      <div id="carouselExampleIndicators" class="carousel slide mb-5" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://res.cloudinary.com/dopvhkefb/image/upload/v1708040849/Yum%20Yum/xpbobgqvfq2nyy0ixczx.webp" class="d-block w-100" alt="img-carousel">
+          </div>
+          <div class="carousel-item">
+            <img src="https://res.cloudinary.com/dopvhkefb/image/upload/v1708040849/Yum%20Yum/d0rl08kdd5casiyfmkp0.webp" class="d-block w-100" alt="img-carousel">
+          </div>
+          <div class="carousel-item">
+            <img src="https://res.cloudinary.com/dopvhkefb/image/upload/v1708040848/Yum%20Yum/amdlwhiwmi3vsq1n0gbv.webp" class="d-block w-100" alt="img-carousel">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
+      <h2 class="text-center mt-5 fs-1 fw.bold">Categorias</h2>
+      <section class="d-flex justify-content-evenly flex-wrap pb-5">
+        <div class="card mt-5" style="width: 20rem;">
+          <img src="https://tiendadivinamujer.com/wp-content/uploads/2022/12/download-all-images-download-main-image-do_main-4.jpg" class="card-img-top" alt="product" width="318px" height="318px">
+          <div class="card-body">
+              <h5 class="card-title fw-bold text-center">Aretes</h5>
+          </div>
+        </div>
+        <div class="card mt-5" style="width: 20rem;">
+          <img src="https://images.pexels.com/photos/10983785/pexels-photo-10983785.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="product" width="318px" height="318px">
+          <div class="card-body">
+              <h5 class="card-title fw-bold text-center">Collares</h5>
+          </div>
+        </div>
+        <div class="card mt-5" style="width: 20rem;">
+          <img src="https://images.pexels.com/photos/1191531/pexels-photo-1191531.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="product" width="318px" height="318px">
+          <div class="card-body">
+              <h5 class="card-title fw-bold text-center">Pulseras</h5>
+          </div>
+        </div>
+      </section>
+      <h2 class="text-center mt-5 fs-1 fw.bold">Los más vendidos</h2>
+      <section class="d-flex justify-content-evenly flex-wrap pb-5">
+        <div class="card mt-5" style="width: 20rem;">
+          <img src="https://whimsofgirls.com/10329-large_default/earcuff-chunky-de-rodio-x-unad.jpg" class="card-img-top" alt="product" width="318px" height="318px">
+          <div class="card-body">
+              <h5 class="card-title fw-bold text-center">Earcuff chunky</h5>
+          </div>
+        </div>
+        <div class="card mt-5" style="width: 20rem;">
+          <img src="https://tiendadivinamujer.com/wp-content/uploads/2022/12/download-all-images-download-main-image-do_main-4.jpg" class="card-img-top" alt="product" width="318px" height="318px">
+          <div class="card-body">
+              <h5 class="card-title fw-bold text-center">Aretes rosa</h5>
+          </div>
+        </div>
+        <div class="card mt-5" style="width: 20rem;">
+          <img src="https://media.istockphoto.com/id/1209614213/es/foto/pendientes-de-perno-de-oro-rosa-en-forma-de-corazones-sobre-fondo-rosa.jpg?s=612x612&w=0&k=20&c=XdVPafqsmYp2IVcuQxeNABHkue4CL574JfugQumTxy8=" class="card-img-top" alt="product" width="318px" height="318px">
+          <div class="card-body">
+              <h5 class="card-title fw-bold text-center">Aretes chupeta de corazón</h5>
+          </div>
+        </div>
+        <div class="card mt-5" style="width: 20rem;">
+          <img src="https://res.cloudinary.com/dvun7eeq1/image/upload/v1706200502/aretes_z5dcwj.jpg" class="card-img-top" alt="product" width="318px" height="318px">
+          <div class="card-body">
+              <h5 class="card-title fw-bold text-center">Candongas personalizadas</h5>
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
       <div class="navFooter">
         <div class="d-flex links-footer">
           <ul class="ul-footer">
             <li>
-              <a href="#">Inicio</a>
+              <a href="/index.html">Inicio</a>
             </li>
             <li>
               <a href="/html/products.html">Productos</a>
