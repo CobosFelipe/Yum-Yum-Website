@@ -30,7 +30,7 @@
   </head>
   <body>
     <header class="header">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container-fluid">
           <a href="/index.html"><img src="/img/logo.png" alt="logo" /></a>
           <button
@@ -70,17 +70,26 @@
           </div>
         </div>
       </nav>
-      <div class="d-flex flex-column-reverse justify-content-center">
+      <!-- <div class="d-flex flex-column-reverse justify-content-center">
         <div>
-          <h2 class="text-center fs-2 fw-bold mb-5">Sobre nosotros</h2>
-        </div>
-        <div class="text-center mt-5">
+          <h2 class="text-center fs-2 fw-bold mb-5">¡Bienvenidos!</h2>
+        </div> -->
+        <!-- <div class="text-center mt-5">
           <img class="mt-5 logo" src="/img/logotipo.png" alt="logo" />
         </div>
-      </div>
+      </div> -->
     </header>
     <main class="pt-5">
-      <div class="profile d-flex flex-wrap">
+      <div class="presentacion">
+        <img src="/img/Nosotros.png" alt="Nosotros" class="img-nosotros p-3">
+        <p class="descripcion">
+          Bienvenidos a Yum Yum, donde la creatividad y la artesanía se unen para dar vida a accesorios únicos y encantadores.
+          En Yum Yum, nos dedicamos a crear piezas hechas a mano con amor y cuidado, utilizando materiales de alta calidad y técnicas artesanales tradicionales.
+          Cada artículo que producimos refleja nuestro compromiso con la originalidad, la belleza y la atención al detalle. 
+        </p>
+    </div>
+</div>
+      <div class="profile d-flex flex-wrap mt-5 mb-5">
         <div class="d-flex flex-column">
           <img class="imgCard profileImage" src="/img/Lore.jpg" alt="lore" />
           <p class="title">Lorena Nivia</p>
@@ -91,8 +100,9 @@
           quienes admiraban su talento, decidió llevar su pasión al siguiente nivel y transformarla en un negocio próspero.
         </p>
       </div>
-      <div class="p-5">
-        <h3 class="text-center fw-bold mb-3">Equipo de desarrollo</h3>
+      <div class="contenedor p-5">
+      <div class="p-4">
+        <h3 class="text-center fw-bold mb-3 pt-5 pb-2">Equipo de desarrollo</h3>
         <p class="description m-0">
           En el apasionante mundo del desarrollo de software, un equipo de cuatro desarrolladores juniors se embarca en su emocionante primer
           proyecto. Estos jóvenes talentos, ansiosos por aplicar sus conocimientos recién adquiridos, están listos para enfrentar desafíos y aprender
@@ -119,11 +129,11 @@
           <div class="innerCard">
             <div class="frontSide">
               <img class="imgCard" src="/img/Juanita.jpg" alt="" />
-              <p class="title">Juanita Rodríguez</p>
+              <p class="title">Juanita Rodriguez</p>
             </div>
             <div class="backSide">
               <p>Desarrollador Full Stack | Desarrollador Junior | Front-end | Back-end</p>
-              <p class="title">Juanita Rodríguez</p>
+              <p class="title">Juanita Rodriguez</p>
             </div>
           </div>
         </div>
@@ -152,6 +162,7 @@
           </div>
         </div>
       </div>
+    </div>
     </main>
     <footer>
       <div class="navFooter">

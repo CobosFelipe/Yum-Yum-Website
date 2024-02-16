@@ -12,6 +12,11 @@
   --cherry: #bc7098;
   --formBackground: linear-gradient(180deg, rgba(188, 112, 152, 0.95) -20%, rgba(255, 182, 185, 0.95) 100%);
 }
+main{
+    background: linear-gradient(-45deg, #eeb6ff, #dfbaff, #a5dbfd);
+    background-size: 400% 400%;
+    animation: gradient 8s ease infinite;
+}
 .card{
   border-radius: 20px !important;
   width: 90vw;
