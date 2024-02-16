@@ -45,7 +45,7 @@ function getProducts() {
       fillProductsDiv(json.Products);
     })
     .catch((error) => {
-      console.log("Error consumiendo la api");
+      console.log("Error consumiendo la api: " + error);
     });
 }
 
@@ -61,7 +61,7 @@ function fillProductsDiv(json) {
     </div>
     `;
   }
-  document.getElementById("products1").innerHTML = card;
+  document.getElementById("products").innerHTML = card;
 }
 
 getProducts();
