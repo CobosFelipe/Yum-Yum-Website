@@ -12,7 +12,7 @@
   --cherry: #bc7098;
   --formBackground: linear-gradient(180deg, rgba(188, 112, 152, 0.95) -20%, rgba(255, 182, 185, 0.95) 100%);
 }
-.card{
+.conteiner-form{
   border-radius: 20px !important;
   width: 90vw;
   margin: 2rem 0;
@@ -39,19 +39,16 @@ input, textarea {
 .logo-send-image{
   display: none;
 }
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+
+.card-body{
+  align-items: center;
 }
+
 @media screen and (min-width: 940px) {
-  .card{
+  .card-body{
+    margin: 0 1rem;
+  }
+  .conteiner-form{
     width: 90vh;
   }
   .logo-send-image{
@@ -64,6 +61,6 @@ input, textarea {
     width: 300px;
   }
   form{
-  width: 60%;
+  width: 70%;
   }
 }

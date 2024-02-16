@@ -89,6 +89,24 @@
       "price": 25000,
       "stock": 500,
       "imageUrl": "https://res.cloudinary.com/dvun7eeq1/image/upload/v1706200502/aretes_z5dcwj.jpg"
+    },
+    {
+      "id": 11,
+      "title": "Variedad de collares",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis at harum odit enim aliquam. Harum error at quos libero consectetur porro labore, illum, doloremque iusto, placeat maiores nostrum ab voluptatum",
+      "color": "rosa",
+      "price": 35000,
+      "stock": 500,
+      "imageUrl": "https://images.pexels.com/photos/10983785/pexels-photo-10983785.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": 12,
+      "title": "Pulseras personalizadas",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis at harum odit enim aliquam. Harum error at quos libero consectetur porro labore, illum, doloremque iusto, placeat maiores nostrum ab voluptatum",
+      "color": "rosa",
+      "price": 23000,
+      "stock": 500,
+      "imageUrl": "https://images.pexels.com/photos/1191531/pexels-photo-1191531.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     }
   ]
 }

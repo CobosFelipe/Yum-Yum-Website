@@ -14,8 +14,38 @@
   --formBackground: linear-gradient(180deg, rgba(188, 112, 152, 0.95) -20%, rgba(255, 182, 185, 0.95) 100%);
   box-sizing: border-box;
 }
+main{
+    background: linear-gradient(-45deg, #eeb6ff, #dfbaff, #a5dbfd);
+    background-size: 400% 400%;
+    animation: gradient 8s ease infinite;
+}
 ::selection {
   background: 0;
+}
+.arrow a:hover{
+  color: var(--cherry);
+}
+.arrow{
+  position: absolute;
+  margin-right: 300px;
+}
+.arrow a{
+  color: #000000;
+}
+@keyframes latidos {
+  from { transform: none; }
+  50% { transform: scale(1.2); }
+  to { transform: none; }
+}
+/* En la clase corazon vamos a llamar latidos en la animación  */
+.corazon {
+display: inline-block;
+font-size: 70px;
+text-shadow: 0 0 10px #504e4e,1px 1px  0 #810606;
+color: pink;
+background-size: 200% 200%;
+animation: latidos 1.5s infinite;
+transform-origin: center;
 }
 
 main {
@@ -23,8 +53,7 @@ main {
   height: 100vh;
   display: grid;
   place-content: center;
-}
-
+} 
 section {
   min-height: 730px;
   min-width: 380px;
@@ -151,5 +180,9 @@ a {
   }
   form {
     min-width: 350px;
+  }
+  .arrow{
+    position: absolute;
+    margin-right: 400px;
   }
 }
