@@ -26,7 +26,8 @@ main{
   color: var(--cherry);
 }
 .arrow{
-  display: flex;
+  position: absolute;
+  margin-right: 300px;
 }
 .arrow a{
   color: #000000;
@@ -179,5 +180,9 @@ a {
   }
   form {
     min-width: 350px;
+  }
+  .arrow{
+    position: absolute;
+    margin-right: 400px;
   }
 }
