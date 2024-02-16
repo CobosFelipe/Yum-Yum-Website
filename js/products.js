@@ -36,7 +36,7 @@ form.addEventListener("submit", (e) => {
   });
 });
 
-const url = "http://127.0.0.1:5500/json/products.json";
+const url = '../json/products.json';
 
 function getProducts() {
   fetch(url)
