@@ -53,21 +53,21 @@
     font-weight: 400;
 }
 @keyframes gradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
+  0% {
+    background-position: 0% 50%;
   }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 /*Header section*/
 .logo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .nav-links {
@@ -113,7 +113,15 @@
 .img {
     text-align: center;
 }
-
+.card{
+  transition: all .2s ease-in-out;
+  box-shadow: 0 0 3rem rgba(0, 0, 0, .25);
+}
+.card:hover{
+  transform: scale(1.05);
+  cursor: pointer;
+  box-shadow: 0 0 3rem rgba(0, 0, 0, .35);
+}
 /*Footer section*/
 footer {
     background-color: #f8f9fa;
@@ -130,11 +138,11 @@ footer {
 }
 
 .navFooter ul {
-    list-style: none;
-    flex-direction: column;
-    padding-top: 10px;
-    text-align: center;
-    padding-left: 0;
+  list-style: none;
+  flex-direction: column;
+  padding-top: 10px;
+  text-align: center;
+  padding-left: 0;
 }
 
 .navFooter ul li a,

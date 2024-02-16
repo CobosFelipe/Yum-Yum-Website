@@ -36,7 +36,7 @@ form.addEventListener("submit", (e) => {
   });
 });
 
-const url = "http://127.0.0.1:5500/json/products.json";
+const url = '../json/products.json';
 
 function getProducts() {
   fetch(url)
@@ -51,7 +51,7 @@ function getProducts() {
 
 function fillProductsDiv(json) {
   let card = "";
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 12; i++) {
     card += `<div class="card mb-2" style="width: 20rem;">
         <img src="${json[i].imageUrl}" class="card-img-top" alt="product" width="318px" height="318px">
         <div class="card-body">

@@ -19,7 +19,7 @@ if (!localStorage.getItem("usuarios")){
   fetch(usersJson)
   .then((response) => response.json())
   .then((data) => {
-    localStorage.setItem('usuarios',JSON.stringify(data.Users));
+    localStorage.setItem('usuarios', JSON.stringify(data.Users));
   })
   .catch((error) => {
     console.log("error consumiendo la api");
