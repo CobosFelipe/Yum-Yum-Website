@@ -44,7 +44,7 @@ font-size: 70px;
 text-shadow: 0 0 10px #504e4e,1px 1px  0 #810606;
 color: pink;
 background-size: 200% 200%;
-animation: latidos.5s infinite;
+animation: latidos 1.5s infinite;
 transform-origin: center;
 }
 
