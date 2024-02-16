@@ -12,8 +12,6 @@
   --white: #ffffff;
 }
 .profile {
-  padding: 2rem 2rem;
-  border-radius: 2rem;
   /* Glass effect */
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
@@ -26,7 +24,9 @@
 
 .imgCard {
   width: 210px;
-  border-radius: 1em;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  margin-top: -7px;
 }
 
 .myCard {
@@ -126,6 +126,5 @@
     width: 80vw;
     margin: auto;
     padding: 3rem 2rem;
-    border-radius: 2rem;
   }
 }

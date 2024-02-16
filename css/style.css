@@ -18,17 +18,12 @@
     background: linear-gradient(-45deg, #eeb6ff, #dfbaff, #a5dbfd);
     background-size: 400% 400%;
     animation: gradient 8s ease infinite;
-} 
+}  
 
 .presentacion .img-nosotros{
     width: 40vw;
 }
-.presentacion p {
-    font-size: 25px;
-    text-align: center;
-    margin: 30px;
-    font-weight: bold ;
-}
+
 .fst-italic{
     text-align: justify;
     margin: 30px;
@@ -37,20 +32,20 @@
     text-align: justify;
 }
 .presentacion {
-    height: 90vh;
+    height: 30vh;
     margin: auto;
     color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background:linear-gradient(rgba(255, 224, 225, 0.781) ,rgba(238, 204, 204, 0.397), rgba(248, 208, 209, 0.658)), url("/img/Diseño\ sin\ título\ \(2\).png");
+    background:linear-gradient(rgba(226, 215, 215, 0.781) ,rgba(247, 165, 229, 0.95), rgba(248, 208, 209, 0.658)), url("/img/Fondo\ De\ Pantalla\ Con\ Formas\ Neón\ Futurístico\ Multicolor.png");
     background-size: cover;
     background-attachment: fixed;
     scroll-behavior: smooth;
 }
 .contenedor{
-    background-image:linear-gradient( rgba(248, 208, 209, 0.658) ,rgba(238, 204, 204, 0.397), rgba(248, 208, 209, 0.658) ),url("/img/Diseño\ sin\ título\ \(2\).png");
+    background-image:linear-gradient( rgba(226, 215, 215, 0.781) ,rgba(247, 165, 229, 0.95), rgba(248, 208, 209, 0.658) ),url("/img/Fondo\ De\ Pantalla\ Con\ Formas\ Neón\ Futurístico\ Multicolor.png");
     background-size: cover;
     background-attachment: fixed; 
 } 
@@ -180,6 +175,9 @@ div.banner {
     }
     p.description {
         font-size: 1.3rem;
+    }
+    .presentacion{
+        height: 50vh;
     }
     .contenedor .description {
         padding: 0px 150px;

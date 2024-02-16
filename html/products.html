@@ -1,176 +1,161 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/products.css" />
-    <link rel="stylesheet" href="/css/cards.css" />
-    <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon" />
-    <!-- CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-    <!-- CDN sweetalert2 -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <title>Yum Yum</title>
-  </head>
-  <body>
-    <header class="header">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <div class="container-fluid">
-          <a href="/index.html"><img src="/img/logo.png" alt="logo" /></a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-            id="navbarToggle"
-          >
-            <i class="fas fa-bars"></i>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 nav-links">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="/html/products.html">Productos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="/html/aboutUs.html">Nosotros</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="/html/contact.html">Contacto</a>
-              </li>
-              <li class="nav-item mobile-icon">
-                <a class="nav-link" href="/html/login.html">
-                  <img src="/svg/user-round.svg" class="imgIcon" />
-                </a>
-              </li>
-              <li class="nav-item mobile-icon">
-                <a class="nav-link" href="#">
-                  <img src="/svg/shopping-bag.svg" class="imgIcon" />
-                </a>
-              </li>
-            </ul>
-          </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/products.css" />
+  <link rel="stylesheet" href="/css/cards.css" />
+  <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <!-- CDN sweetalert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <title>Yum Yum</title>
+</head>
+
+<body>
+  <header class="header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container-fluid">
+        <a href="/index.html"><img src="/img/logo.png" alt="logo" /></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="navbarToggle">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 nav-links">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/html/products.html">Productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/html/aboutUs.html">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/html/contact.html">Contacto</a>
+            </li>
+            <li class="nav-item mobile-icon">
+              <a class="nav-link" href="/html/login.html">
+                <img src="/svg/user-round.svg" class="imgIcon" />
+              </a>
+            </li>
+            <li class="nav-item mobile-icon">
+              <a class="nav-link" href="#">
+                <img src="/svg/shopping-bag.svg" class="imgIcon" />
+              </a>
+            </li>
+          </ul>
         </div>
-      </nav>
-    </header>
-    <main>
-      <div class="presentacion">
-        <img src="/img/Productos.webp" alt="Nosotros" class="img-nosotros p-3">
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="presentacion">
+      <img src="/img/Productos.webp" alt="Nosotros" class="img-nosotros p-3">
     </div>
-</div>
-      <div class="mt-5 mb-5 conteiner-products" id="products"></div>
-      <div class="mt-5 mb-5 conteiner-products" id="products1"></div>
-      <div class="d-flex justify-content-center">
-        <button type="button" class="btn btn-dark mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal">Cargar más productos</button>
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Crear un nuevo producto</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-bod p-4">
-                <form>
-                  <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Id</label>
-                    <input type="text" class="form-control" id="id" required />
-                  </div>
-                  <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Nombre del producto</label>
-                    <input type="text" class="form-control" id="title" required />
-                  </div>
-                  <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Descripcion</label>
-                    <input type="text" class="form-control" id="description" required />
-                  </div>
-                  <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Precio</label>
-                    <input type="text" class="form-control" id="price" required />
-                  </div>
-                  <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Stock</label>
-                    <input type="text" class="form-control" id="stock" required />
-                  </div>
-                  <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Color</label>
-                    <input type="text" class="form-control" id="color" required />
-                  </div>
-                  <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Url de la imagen</label>
-                    <input type="text" class="form-control" id="image" required />
-                  </div>
-                  <div class="d-flex justify-content-end">
-                    <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="submit" class="btn btn-dark" id="btn-save">Guardar</button>
-                  </div>
-                </form>
-              </div>
+    <div class="mt-5 mb-5 pt-5 conteiner-products" id="products"></div>
+    <div class="mt-5 mb-5 conteiner-products" id="products1"></div>
+    <div class="d-flex justify-content-center">
+      <button type="button" class="btn btn-dark mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal">Cargar más
+        productos</button>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Crear un nuevo producto</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-bod p-4">
+              <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Id</label>
+                  <input type="text" class="form-control" id="id" required />
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Nombre del producto</label>
+                  <input type="text" class="form-control" id="title" required />
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Descripcion</label>
+                  <input type="text" class="form-control" id="description" required />
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Precio</label>
+                  <input type="text" class="form-control" id="price" required />
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Stock</label>
+                  <input type="text" class="form-control" id="stock" required />
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Color</label>
+                  <input type="text" class="form-control" id="color" required />
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Url de la imagen</label>
+                  <input type="text" class="form-control" id="image" required />
+                </div>
+                <div class="d-flex justify-content-end">
+                  <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">Cerrar</button>
+                  <button type="submit" class="btn btn-dark" id="btn-save">Guardar</button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
       </div>
-    </main>
-    <footer>
-      <div class="navFooter">
-        <div class="d-flex links-footer">
-          <ul class="ul-footer">
-            <li>
-              <a href="/index.html">Inicio</a>
-            </li>
-            <li>
-              <a href="/html/products.html">Productos</a>
-            </li>
-            <li>
-              <a href="/html/aboutUs.html">Nosotros</a>
-            </li>
-            <li>
-              <a href="/html/contact.html">Contacto</a>
-            </li>
-          </ul>
-        </div>
-        <ul class="socialNetwork">
+    </div>
+  </main>
+  <footer>
+    <div class="navFooter">
+      <div class="d-flex links-footer">
+        <ul class="ul-footer">
           <li>
-            <a href="https://www.instagram.com/yum.bylorennivia/" target="_blank">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
+            <a href="/index.html">Inicio</a>
           </li>
           <li>
-            <a href="https://www.tiktok.com/@yum.bylorennivia" target="_blank">
-              <i class="fa-brands fa-tiktok"></i>
-            </a>
+            <a href="/html/products.html">Productos</a>
           </li>
           <li>
-            <a href="https://api.whatsapp.com/message/6M4LB3XJPB7EB1?autoload=1&app_absent=0" target="_blank">
-              <i class="fa-brands fa-whatsapp"></i>
-            </a>
+            <a href="/html/aboutUs.html">Nosotros</a>
+          </li>
+          <li>
+            <a href="/html/contact.html">Contacto</a>
           </li>
         </ul>
       </div>
-      <div class="text-center pb-3">
-        <span class="copyright">© 2024 Copyright: Dev with ❤ by Sense8</span>
-      </div>
-    </footer>
-    <script src="/js/products.js"></script>
-  </body>
+      <ul class="socialNetwork">
+        <li>
+          <a href="https://www.instagram.com/yum.bylorennivia/" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.tiktok.com/@yum.bylorennivia" target="_blank">
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://api.whatsapp.com/message/6M4LB3XJPB7EB1?autoload=1&app_absent=0" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="text-center pb-3">
+      <span class="copyright">© 2024 Copyright: Dev with ❤ by Sense8</span>
+    </div>
+  </footer>
+  <script src="/js/products.js"></script>
+</body>
+
 </html>
