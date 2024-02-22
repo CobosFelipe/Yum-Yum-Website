@@ -21,10 +21,10 @@ USE `yumyum-database` ;
 -- Table `yumyum-database`.`categories`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `yumyum-database`.`categories` (
-  `idcategories` INT NOT NULL AUTO_INCREMENT,
-  `name` VARCHAR(45) NOT NULL,
-  `description` VARCHAR(45) NOT NULL,
-  `url_img` VARCHAR(100) NOT NULL,
+  `idcategories` BIGINT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(100) NOT NULL,
+  `description` VARCHAR(255) NOT NULL,
+  `url_img` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`idcategories`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb3;
@@ -34,15 +34,15 @@ DEFAULT CHARACTER SET = utf8mb3;
 -- Table `yumyum-database`.`products`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `yumyum-database`.`products` (
-  `idproducts` INT NOT NULL AUTO_INCREMENT,
-  `name` VARCHAR(45) NOT NULL,
-  `decription` VARCHAR(45) NOT NULL,
+  `idproducts` BIGINT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(100) NOT NULL,
+  `description` VARCHAR(255) NOT NULL,
   `amount_stock` INT NOT NULL,
   `price` DOUBLE NOT NULL,
   `has_color` TINYINT(1) NOT NULL,
-  `colors` VARCHAR(45) NOT NULL,
-  `url_img` VARCHAR(100) NOT NULL,
-  `categories_idcategories` INT NOT NULL,
+  `colors` VARCHAR(255) NOT NULL,
+  `url_img` VARCHAR(255) NOT NULL,
+  `categories_idcategories` BIGINT NOT NULL,
   PRIMARY KEY (`idproducts`),
   INDEX `fk_products_categories1_idx` (`categories_idcategories` ASC) VISIBLE,
   CONSTRAINT `fk_products_categories1`
@@ -56,10 +56,10 @@ DEFAULT CHARACTER SET = utf8mb3;
 -- Table `yumyum-database`.`users`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `yumyum-database`.`users` (
-  `idusers` INT NOT NULL AUTO_INCREMENT,
-  `name` VARCHAR(45) NOT NULL,
+  `idusers` BIGINT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(100) NOT NULL,
   `phone` VARCHAR(45) NOT NULL,
-  `email` VARCHAR(45) NOT NULL,
+  `email` VARCHAR(100) NOT NULL,
   `password` VARCHAR(45) NOT NULL,
   `role` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`idusers`))
@@ -71,18 +71,18 @@ DEFAULT CHARACTER SET = utf8mb3;
 -- Table `yumyum-database`.`cart`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `yumyum-database`.`cart` (
-  `idcart` INT NOT NULL AUTO_INCREMENT,
-  `products_idproducts` INT NOT NULL,
-  `users_idusers` INT NOT NULL,
+  `idcart` BIGINT NOT NULL AUTO_INCREMENT,
+  `products_idproducts` BIGINT NOT NULL,
+  `users_idusers` BIGINT NOT NULL,
   `total_price` DOUBLE NOT NULL,
   `amount` INT NOT NULL,
   PRIMARY KEY (`idcart`, `products_idproducts`, `users_idusers`),
-  INDEX `fk_products_has_users_users1_idx` (`users_idusers` ASC) VISIBLE,
-  INDEX `fk_products_has_users_products_idx` (`products_idproducts` ASC) VISIBLE,
-  CONSTRAINT `fk_products_has_users_products`
+  INDEX `fk_users_idusers1_idx` (`users_idusers` ASC) VISIBLE,
+  INDEX `fk_products_idproducts1_idx` (`products_idproducts` ASC) VISIBLE,
+  CONSTRAINT `fk_products_idproducts`
     FOREIGN KEY (`products_idproducts`)
     REFERENCES `yumyum-database`.`products` (`idproducts`),
-  CONSTRAINT `fk_products_has_users_users1`
+  CONSTRAINT `fk_users_idusers`
     FOREIGN KEY (`users_idusers`)
     REFERENCES `yumyum-database`.`users` (`idusers`))
 ENGINE = InnoDB
