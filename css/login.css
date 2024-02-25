@@ -53,7 +53,8 @@ main {
   height: 100vh;
   display: grid;
   place-content: center;
-} 
+}
+
 section {
   min-height: 730px;
   min-width: 380px;
