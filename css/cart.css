@@ -81,12 +81,8 @@ h2{
   margin:  0 6px;
 }
 
-
-
 .cantidad{
   width: 100px;
-  border-style: solid;
-  border-width: 1px;
   border-radius: .5rem;
   align-items: center;
   background-color: #ffffff78;
@@ -109,7 +105,7 @@ input{
   border-radius: .6rem;
   text-align: center;
   font-weight: lighter;
-  background: none;
+  background: transparent;
   border: none;
 }
 
@@ -122,4 +118,5 @@ p{
     width: 90vw!important;
     max-width: 500px;
   }
+  
 }
