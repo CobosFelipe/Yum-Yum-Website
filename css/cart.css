@@ -81,8 +81,6 @@ h2{
   margin:  0 6px;
 }
 
-
-
 .cantidad{
   width: 100px;
   border-radius: .5rem;
@@ -107,7 +105,7 @@ input{
   border-radius: .6rem;
   text-align: center;
   font-weight: lighter;
-  background: none;
+  background: transparent;
   border: none;
 }
 
@@ -140,4 +138,5 @@ button.buyButton2{
     width: 90vw!important;
     max-width: 500px;
   }
+  
 }
