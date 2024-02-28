@@ -19,11 +19,9 @@
     background-size: 400% 400%;
     animation: gradient 8s ease infinite;
 }  
-
 .presentacion .img-nosotros{
     width: 40vw;
 }
-
 .fst-italic{
     text-align: justify;
     margin: 30px;
@@ -39,13 +37,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background:linear-gradient(rgba(226, 215, 215, 0.781) ,rgba(247, 165, 229, 0.95), rgba(248, 208, 209, 0.658)), url("/img/Fondo\ De\ Pantalla\ Con\ Formas\ Neón\ Futurístico\ Multicolor.png");
+    background:linear-gradient(rgba(255, 182, 185, 0.95), rgba(250, 200, 201, 0.658)), url("/img/Fondo\ De\ Pantalla\ Con\ Formas\ Neón\ Futurístico\ Multicolor.png");
     background-size: cover;
     background-attachment: fixed;
     scroll-behavior: smooth;
 }
 .contenedor{
-    background-image:linear-gradient( rgba(226, 215, 215, 0.781) ,rgba(247, 165, 229, 0.95), rgba(248, 208, 209, 0.658) ),url("/img/Fondo\ De\ Pantalla\ Con\ Formas\ Neón\ Futurístico\ Multicolor.png");
+    background-image:linear-gradient( rgba(255, 182, 185, 0.95), rgba(250, 200, 201, 0.658) ),url("/img/Fondo\ De\ Pantalla\ Con\ Formas\ Neón\ Futurístico\ Multicolor.png");
     background-size: cover;
     background-attachment: fixed; 
 } 
