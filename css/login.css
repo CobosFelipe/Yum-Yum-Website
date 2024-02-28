@@ -26,7 +26,8 @@ main{
   color: var(--cherry);
 }
 .arrow{
-  display: flex;
+  position: absolute;
+  margin-right: 300px;
 }
 .arrow a{
   color: #000000;
@@ -43,7 +44,7 @@ font-size: 70px;
 text-shadow: 0 0 10px #504e4e,1px 1px  0 #810606;
 color: pink;
 background-size: 200% 200%;
-animation: latidos.5s infinite;
+animation: latidos 1.5s infinite;
 transform-origin: center;
 }
 
@@ -52,7 +53,8 @@ main {
   height: 100vh;
   display: grid;
   place-content: center;
-} 
+}
+
 section {
   min-height: 730px;
   min-width: 380px;
@@ -179,5 +181,9 @@ a {
   }
   form {
     min-width: 350px;
+  }
+  .arrow{
+    position: absolute;
+    margin-right: 400px;
   }
 }

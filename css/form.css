@@ -40,7 +40,14 @@ input, textarea {
   display: none;
 }
 
+.card-body{
+  align-items: center;
+}
+
 @media screen and (min-width: 940px) {
+  .card-body{
+    margin: 0 1rem;
+  }
   .conteiner-form{
     width: 90vh;
   }
@@ -54,6 +61,6 @@ input, textarea {
     width: 300px;
   }
   form{
-  width: 60%;
+  width: 70%;
   }
 }
