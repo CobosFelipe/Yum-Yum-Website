@@ -37,6 +37,9 @@ function restar(e) {
   console.log(cantidadActual);
   cantidadActual--;
   selector.getElementsByClassName('product-cant-cart')[0].value = cantidadActual;
+  if (cantidadActual < 1) {
+    productoNegativo(selector.parentElement);
+  }
 }
 
 function agregar(e) {
@@ -50,6 +53,10 @@ function agregar(e) {
 
 function eliminar(e) {
   e.target.parentNode.remove();
+}
+
+function productoNegativo(e) {
+  e.parentNode.remove();
 }
 
 agregarEventos();
