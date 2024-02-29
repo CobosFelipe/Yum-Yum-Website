@@ -34,12 +34,16 @@
 }
 
 main {
-  background: linear-gradient(-45deg, #eeb6ff, #dfbaff, #a5dbfd);
-  background-size: 400% 400%;
+  overflow: auto;
+  background: linear-gradient(rgba(226, 215, 215, 0.781), rgba(247, 165, 229, 0.95), rgba(248, 208, 209, 0.658)),
+    url("/img/Fondo\ De\ Pantalla\ Con\ Formas\ Neón\ Futurístico\ Multicolor.png");
+  background-size: cover;
+  background-attachment: fixed;
+  scroll-behavior: smooth;
   animation: gradient 8s ease infinite;
 }
 
-.presentacion .img-nosotros {
+.img-nosotros {
   width: 60vw;
   max-width: 20rem;
 }
@@ -50,20 +54,6 @@ main {
 }
 .p-4 {
   text-align: justify;
-}
-.presentacion {
-  height: 30vh;
-  margin: auto;
-  color: black;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(rgba(226, 215, 215, 0.781), rgba(247, 165, 229, 0.95), rgba(248, 208, 209, 0.658)),
-    url("/img/Fondo\ De\ Pantalla\ Con\ Formas\ Neón\ Futurístico\ Multicolor.png");
-  background-size: cover;
-  background-attachment: fixed;
-  scroll-behavior: smooth;
 }
 .contenedor {
   background-image: linear-gradient(rgba(226, 215, 215, 0.781), rgba(247, 165, 229, 0.95), rgba(248, 208, 209, 0.658)),
