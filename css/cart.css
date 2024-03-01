@@ -133,10 +133,168 @@ button.buyButton2{
   color: #ffffff;
   font-size: larger;
 }
-@media screen and (min-widith: 768px) {
-  .divProducts{
-    width: 90vw!important;
-    max-width: 500px;
+@media screen and (min-width: 940px) and (max-width:1015px){
+  main{
+    height: 90vh;
   }
-  
+  .divProducts{
+    max-width: 1100px;
+  }
+  .imgProduct{
+    margin-right: auto;
+  }
+  .d-flex{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .infoProducto{
+    gap: 110px;
+  }
+  .btn-close{
+    margin-top: -80px;
+  }
+  .contenedor-boton{
+    justify-content: center;
+    flex-direction: row;
+    gap: 40px;
+  }
+  button.buyButton1{
+    width: 300px;
+  }
+  button.buyButton2{
+    width: 300px;
+  }
+}
+@media screen and (min-width: 1016px){
+  main{
+    height: 90vh;
+  }
+  .divProducts{
+    max-width: 1000px;
+  }
+  .imgProduct{
+    margin-right: auto;
+  }
+  .d-flex{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .infoProducto{
+    gap: 130px;
+  }
+  .btn-close{
+    margin-top: -80px;
+  }
+  .contenedor-boton{
+    justify-content: center;
+    flex-direction: row;
+    gap: 40px;
+  }
+  button.buyButton1{
+    width: 300px;
+  }
+  button.buyButton2{
+    width: 300px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width:850px){
+  main{
+    height: 90vh;
+  }
+  .divProducts{
+    max-width: 1000px;
+  }
+  .imgProduct{
+    margin-right: auto;
+  }
+  .d-flex{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .infoProducto{
+    gap: 60px;
+  }
+  .btn-close{
+    margin-top: -80px;
+  }
+  .contenedor-boton{
+    justify-content: center;
+    flex-direction: row;
+    gap: 40px;
+  }
+  button.buyButton1{
+    width: 300px;
+  }
+  button.buyButton2{
+    width: 300px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width:850px){
+  main{
+    height: 90vh;
+  }
+  .divProducts{
+    max-width: 1000px;
+  }
+  .imgProduct{
+    margin-right: auto;
+  }
+  .d-flex{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .infoProducto{
+    gap: 60px;
+  }
+  .btn-close{
+    margin-top: -80px;
+  }
+  .contenedor-boton{
+    justify-content: center;
+    flex-direction: row;
+    gap: 40px;
+  }
+  button.buyButton1{
+    width: 300px;
+  }
+  button.buyButton2{
+    width: 300px;
+  }
+}
+@media screen and (min-width: 851px) and (max-width:939px){
+  main{
+    height: 90vh;
+  }
+  .divProducts{
+    max-width: 1000px;
+  }
+  .imgProduct{
+    margin-right: auto;
+  }
+  .d-flex{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .infoProducto{
+    gap: 90px;
+  }
+  .btn-close{
+    margin-top: -80px;
+  }
+  .contenedor-boton{
+    justify-content: center;
+    flex-direction: row;
+    gap: 40px;
+  }
+  button.buyButton1{
+    width: 300px;
+  }
+  button.buyButton2{
+    width: 300px;
+  }
 }
