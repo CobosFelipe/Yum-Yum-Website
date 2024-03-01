@@ -46,7 +46,7 @@ color: pink;
 background-size: 200% 200%;
 animation: latidos 1.5s infinite;
 transform-origin: center;
-}
+} 
 
 main {
   width: 100vw;

@@ -13,9 +13,7 @@
   --peach: #fdbda5;
   --cherry: #bc7098;
   scroll-behavior: smooth;
-}
-
-.navLogo{
+}.navLogo{
   width: 6rem;
 }
 
@@ -48,9 +46,9 @@ main {
   max-width: 20rem;
 }
 
-.fst-italic {
-  text-align: justify;
-  margin: 30px;
+.fst-italic{
+    text-align: justify;
+    margin: 30px;
 }
 .p-4 {
   text-align: justify;
