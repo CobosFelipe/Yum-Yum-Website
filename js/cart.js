@@ -8,7 +8,9 @@ function agregarEventos() {
   let btnCerrar = document.getElementsByClassName("btn-close");
   for (let i = 0; i < btnCerrar.length; i++) {
     let button = btnCerrar[i];
-    button.addEventListener("click", eliminar);
+    button.addEventListener("click", function() {
+      eliminar(i);
+    });
   }
 
   //Agregamos funcionalidad al botón de agregar item
@@ -27,7 +29,6 @@ function agregarEventos() {
 }
 
 // DOM elementos de información de la tarjeta
-
 let cantidad = document.getElementsByClassName("product-cant-cart");
 
 function restar(e) {
@@ -52,21 +53,24 @@ function agregar(e) {
 }
 
 function eliminar(e) {
-  e.target.parentNode.remove();
+  productos.splice(e, 1);
+  localStorage.setItem("Cart", JSON.stringify(productos));
+  mostrarProductos();
+  console.log(productos);
 }
 
 function productoNegativo(e) {
   e.parentNode.remove();
 }
 
-agregarEventos();
+// LocalStorage de los productos agregados
+const productos = JSON.parse(localStorage.getItem("Cart"));
+console.log(productos);
 
 //Mostrar los productos del localStorage
 function mostrarProductos() {
-  let productos = JSON.parse(localStorage.getItem("Cart"));
-  console.log(productos);
-
-  let card = "";
+  if (productos != null) {
+    let card = "";
   for (let i = 0; i < productos.length; i++) {
     card += `
     <div class="product d-flex">
@@ -88,6 +92,10 @@ function mostrarProductos() {
   document.getElementById("cartContainer").innerHTML = card;
   // Llamar a btnAddCart después de un par de segundos
   setTimeout(agregarEventos, 1000);
+  } else {
+    let message = "Carrito Vacio"
+    document.getElementById("cartContainer").innerHTML = message;
+  }
 }
 
 mostrarProductos();
