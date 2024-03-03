@@ -52,18 +52,19 @@ function getProducts() {
 function fillProductsDiv(json) {
   let card = "";
   for (let i = 0; i < 12; i++) {
-    card += `<div class="card mb-2" style="width: 20rem;">
-        <img src="${json[i].imageUrl}" class="card-img-top" alt="product" width="318px" height="318px">
-        <div class="card-body">
-            <h5 class="card-title">${json[i].title}</h5>
-            <p>$${json[i].price.toLocaleString()}</p>
-            <button class="CartBtn">
-            <span class="IconContainer"> 
-              <img src="/svg/button-cart.svg">
-            </span>
-            <p class="text">Lo quiero</p>
-          </button>
-        </div>
+    card += `
+    <div class="card mb-2" style="width: 20rem;">
+      <img src="${json[i].imageUrl}" class="card-img-top" alt="product" width="318px" height="318px">
+      <div class="card-body">
+          <h5 class="card-title">${json[i].title}</h5>
+          <p>$${json[i].price.toLocaleString()}</p>
+          <button class="CartBtn">
+          <span class="IconContainer"> 
+            <img src="/svg/button-cart.svg">
+          </span>
+          <p class="text">Lo quiero</p>
+        </button>
+      </div>
     </div>
     `;
   }
@@ -94,14 +95,18 @@ function addToCart(e) {
   
   let nombreProducto = cardInfo.childNodes[1].innerHTML;
   let precioProducto = cardInfo.childNodes[3].innerHTML;
+  precioProducto = parseFloat(precioProducto.replace(/[^\d-]/g, ''));
+  let cantidad = 1;
 
   // Inicializando un localStorage
   const productsCart = JSON.parse(localStorage.getItem("Cart")) || [];
   
   // Agregar datos en el localStorage
   productsCart.push({
-    imagen: urlImage,
     nombre: nombreProducto,
+    imagen: urlImage,
+    cantidad: cantidad,
+    total: precioProducto,
     precio: precioProducto,
   });
   console.log(productsCart);

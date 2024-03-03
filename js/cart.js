@@ -17,39 +17,55 @@ function agregarEventos() {
   let btnMas = document.getElementsByClassName("btnMas");
   for (let i = 0; i < btnMas.length; i++) {
     let button = btnMas[i];
-    button.addEventListener("click", agregar);
-  }
+    button.addEventListener("click", function(){
+      agregar(i);
+    });
+  } 
+
 
   //Agregamos funcionalidad al botón de eliminar item
   let btnMenos = document.getElementsByClassName("btnMenos");
   for (let i = 0; i < btnMenos.length; i++) {
     let button = btnMenos[i];
-    button.addEventListener("click", restar);
+    button.addEventListener("click", function(){
+      restar(i);
+    }); 
   }
 }
 
 // DOM elementos de información de la tarjeta
 let cantidad = document.getElementsByClassName("product-cant-cart");
+let valor ;
 
-function restar(e) {
-  let btnMenos = e.target;
-  let selector = btnMenos.parentElement;
-  let cantidadActual = selector.getElementsByClassName("product-cant-cart")[0].value;
-  console.log(cantidadActual);
-  cantidadActual--;
-  selector.getElementsByClassName("product-cant-cart")[0].value = cantidadActual;
-  if (cantidadActual < 1) {
-    productoNegativo(selector.parentElement);
+function restar(i) {
+  let cantidad = productos[i].cantidad;
+  if (cantidad < 1) {
+    eliminar(i);
+  } else {
+  let valor = productos[i].precio;
+  cantidad--;
+  let total = cantidad * valor;
+  console.log(total);
+  productos[i].cantidad = cantidad;
+  productos[i].total = total;
+  localStorage.setItem("Cart", JSON.stringify(productos));
+  mostrarProductos();
+  console.log(productos);
   }
 }
 
-function agregar(e) {
-  let btnMas = e.target;
-  let selector = btnMas.parentElement;
-  let cantidadActual = selector.getElementsByClassName("product-cant-cart")[0].value;
-  console.log(cantidadActual);
-  cantidadActual++;
-  selector.getElementsByClassName("product-cant-cart")[0].value = cantidadActual;
+
+function agregar(i) {
+  let cantidad = productos[i].cantidad;
+  let valor = productos[i].precio;
+  cantidad++;
+  let total = cantidad * valor;
+  console.log(total);
+  productos[i].cantidad = cantidad;
+  productos[i].total = total;
+  localStorage.setItem("Cart", JSON.stringify(productos));
+  mostrarProductos();
+  console.log(productos);
 }
 
 function eliminar(e) {
@@ -69,19 +85,18 @@ console.log(productos);
 
 //Mostrar los productos del localStorage
 function mostrarProductos() {
-  if (productos != null) {
-    let card = "";
+  let card = "";
   for (let i = 0; i < productos.length; i++) {
     card += `
     <div class="product d-flex">
           <img class="imgProduct" src="${productos[i].imagen}" />
           <div class="infoProducto d-flex">
             <p>${productos[i].nombre}</p>
-            <p>${productos[i].precio}</p>
+            <p class="valor">$${productos[i].total.toLocaleString()}</p>
             <p>Cantidad</p>
             <div class="cantidad d-flex mt-1">
               <button class="btnMenos">-</button>
-              <input class="product-cant-cart" type="text" value="1" disabled>
+              <input class="product-cant-cart" type="text" value="${productos[i].cantidad}" disabled>
               <button class="btnMas">+</button>
             </div>
           </div>
@@ -92,10 +107,7 @@ function mostrarProductos() {
   document.getElementById("cartContainer").innerHTML = card;
   // Llamar a btnAddCart después de un par de segundos
   setTimeout(agregarEventos, 1000);
-  } else {
-    let message = "Carrito Vacio"
-    document.getElementById("cartContainer").innerHTML = message;
-  }
 }
+
 
 mostrarProductos();

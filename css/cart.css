@@ -16,7 +16,7 @@
 }
 
 main{
-  height: 80vh;
+  height: 74vh;
   width: 100vw;
   overflow: auto;
   background: linear-gradient(rgba(226, 215, 215, 0.781), rgba(247, 165, 229, 0.95), rgba(248, 208, 209, 0.658)),
@@ -45,6 +45,15 @@ h2{
 .divProducts{
   width: 97vw!important;
   max-width: 350px;
+}
+
+.cartEmpty{
+  height: 45vh;
+  /* Glass effect */
+  background-color: #ffffff80;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  border: 1.5px solid rgba(209, 213, 219, 0.3);
 }
 
 .product{
@@ -112,7 +121,8 @@ input{
 p{
   margin: 0!important;
 }
-.contenedor-boton{
+.contenedor-boton, .contenedor-titulo{
+  margin: .5rem 0;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -135,7 +145,7 @@ button.buyButton2{
 }
 @media screen and (min-width: 940px) and (max-width:1015px){
   main{
-    height: 90vh;
+    height: 80vh;
   }
   .divProducts{
     max-width: 1100px;
@@ -168,7 +178,15 @@ button.buyButton2{
 }
 @media screen and (min-width: 1016px){
   main{
-    height: 90vh;
+    height: 80vh;
+  }
+  .cartEmpty{
+    height: 50vh;
+    /* Glass effect */
+    background-color: #ffffff80;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border: 1.5px solid rgba(209, 213, 219, 0.3);
   }
   .divProducts{
     max-width: 1000px;
@@ -201,40 +219,13 @@ button.buyButton2{
 }
 @media screen and (min-width: 768px) and (max-width:850px){
   main{
-    height: 90vh;
+    height: 70vh;
   }
-  .divProducts{
-    max-width: 1000px;
+  .cartEmpty{
+    height: 65vh;
   }
-  .imgProduct{
-    margin-right: auto;
-  }
-  .d-flex{
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .infoProducto{
-    gap: 60px;
-  }
-  .btn-close{
-    margin-top: -80px;
-  }
-  .contenedor-boton{
-    justify-content: center;
-    flex-direction: row;
-    gap: 40px;
-  }
-  button.buyButton1{
-    width: 300px;
-  }
-  button.buyButton2{
-    width: 300px;
-  }
-}
-@media screen and (min-width: 768px) and (max-width:850px){
-  main{
-    height: 90vh;
+  .contenedor-boton, .contenedor-titulo{
+    margin: .5rem 0;
   }
   .divProducts{
     max-width: 1000px;
