@@ -1,0 +1,291 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito Sans", sans-serif;
+  --degradedBackground: linear-gradient(45deg, rgba(188, 112, 152, 0.95) 0%, rgba(255, 182, 185, 0.95) 100%);
+  --bone-white: #f6f3e4;
+  --black: #000000;
+  --yellow: #f6d169;
+  --pink: #ffb6b9;
+  --white: #ffffff;
+  --peach: #fdbda5;
+  --cherry: #bc7098;
+  --formBackground: linear-gradient(180deg, rgba(188, 112, 152, 0.95) -20%, rgba(255, 182, 185, 0.95) 100%);
+  box-sizing: border-box;
+}
+
+main{
+  height: 74vh;
+  width: 100vw;
+  overflow: auto;
+  background: linear-gradient(rgba(226, 215, 215, 0.781), rgba(247, 165, 229, 0.95), rgba(248, 208, 209, 0.658)),
+    url("/img/Fondo\ De\ Pantalla\ Con\ Formas\ Neón\ Futurístico\ Multicolor.png");
+  background-size: cover;
+  background-attachment: fixed;
+  scroll-behavior: smooth;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 55%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 55%;
+  }
+}
+
+h2{
+  text-align: center;
+}
+
+.divProducts{
+  width: 97vw!important;
+  max-width: 350px;
+}
+
+.cartEmpty{
+  height: 45vh;
+  /* Glass effect */
+  background-color: #ffffff80;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  border: 1.5px solid rgba(209, 213, 219, 0.3);
+}
+
+.product{
+  box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.25);
+  padding-block: 1rem;
+  text-transform: uppercase;
+  overflow: hidden;
+  border-radius: 1rem;
+  padding: .5rem;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  /* Glass effect */
+  background: #ffffff80;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  border: 1.5px solid rgba(209, 213, 219, 0.3); 
+}
+
+.btn-close{
+  width: .5em!important;
+  height: .5em!important;
+}
+
+.imgProduct{
+  width: 120px;
+  height: 120px;
+  border-radius: 1rem;
+}
+
+.infoProducto{
+  flex-direction: column;
+  flex-wrap: nowrap;
+  font-size: .8rem;
+  margin:  0 6px;
+}
+
+.cantidad{
+  width: 100px;
+  border-radius: .5rem;
+  align-items: center;
+  background-color: #ffffff94;
+}
+
+.close{
+  width: 1.5rem;
+}
+
+button{
+  width: 1.5rem;
+  height: 1.5rem;
+  background: none;
+  border: none;
+}
+
+input{
+  height: 1.5rem;
+  width: 2rem;
+  border-radius: .6rem;
+  text-align: center;
+  font-weight: lighter;
+  background: transparent;
+  border: none;
+}
+
+p{
+  margin: 0!important;
+}
+.contenedor-boton, .contenedor-titulo{
+  margin: .5rem 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+button.buyButton1{
+  background-color:#646464d0;
+  width: 250px;
+  height: 35px;
+  color: #ffffff;
+  border-radius: 0.5rem;
+  font-size: larger;
+}
+button.buyButton2{
+  background-color:#000000d2;
+  width: 250px;
+  height: 35px;
+  border-radius: 0.5rem;
+  color: #ffffff;
+  font-size: larger;
+}
+@media screen and (min-width: 940px) and (max-width:1015px){
+  main{
+    height: 80vh;
+  }
+  .divProducts{
+    max-width: 1100px;
+  }
+  .imgProduct{
+    margin-right: auto;
+  }
+  .d-flex{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .infoProducto{
+    gap: 110px;
+  }
+  .btn-close{
+    margin-top: -80px;
+  }
+  .contenedor-boton{
+    justify-content: center;
+    flex-direction: row;
+    gap: 40px;
+  }
+  button.buyButton1{
+    width: 300px;
+  }
+  button.buyButton2{
+    width: 300px;
+  }
+}
+@media screen and (min-width: 1016px){
+  main{
+    height: 80vh;
+  }
+  .cartEmpty{
+    height: 50vh;
+    /* Glass effect */
+    background-color: #ffffff80;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border: 1.5px solid rgba(209, 213, 219, 0.3);
+  }
+  .divProducts{
+    max-width: 1000px;
+  }
+  .imgProduct{
+    margin-right: auto;
+  }
+  .d-flex{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .infoProducto{
+    gap: 130px;
+  }
+  .btn-close{
+    margin-top: -80px;
+  }
+  .contenedor-boton{
+    justify-content: center;
+    flex-direction: row;
+    gap: 40px;
+  }
+  button.buyButton1{
+    width: 300px;
+  }
+  button.buyButton2{
+    width: 300px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width:850px){
+  main{
+    height: 70vh;
+  }
+  .cartEmpty{
+    height: 65vh;
+  }
+  .contenedor-boton, .contenedor-titulo{
+    margin: .5rem 0;
+  }
+  .divProducts{
+    max-width: 1000px;
+  }
+  .imgProduct{
+    margin-right: auto;
+  }
+  .d-flex{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .infoProducto{
+    gap: 60px;
+  }
+  .btn-close{
+    margin-top: -80px;
+  }
+  .contenedor-boton{
+    justify-content: center;
+    flex-direction: row;
+    gap: 40px;
+  }
+  button.buyButton1{
+    width: 300px;
+  }
+  button.buyButton2{
+    width: 300px;
+  }
+}
+@media screen and (min-width: 851px) and (max-width:939px){
+  main{
+    height: 90vh;
+  }
+  .divProducts{
+    max-width: 1000px;
+  }
+  .imgProduct{
+    margin-right: auto;
+  }
+  .d-flex{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .infoProducto{
+    gap: 90px;
+  }
+  .btn-close{
+    margin-top: -80px;
+  }
+  .contenedor-boton{
+    justify-content: center;
+    flex-direction: row;
+    gap: 40px;
+  }
+  button.buyButton1{
+    width: 300px;
+  }
+  button.buyButton2{
+    width: 300px;
+  }
+}
