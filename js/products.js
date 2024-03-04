@@ -1,41 +1,3 @@
-const productsStorage = JSON.parse(localStorage.getItem("products")) || [];
-const cardContainer = document.getElementById("products");
-const form = document.querySelector("form");
-
-//Vamos a aguardar el nuevo producto en el LocalStorage
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  const inputId = document.getElementById("id").value;
-  const inputTitle = document.getElementById("title").value;
-  const inputDescription = document.getElementById("description").value;
-  const inputPrice = document.getElementById("price").value;
-  const inputStock = document.getElementById("stock").value;
-  const inputColor = document.getElementById("color").value;
-  const inputImg = document.getElementById("image").value;
-
-  console.log(productsStorage);
-
-  productsStorage.push({
-    id: inputId,
-    title: inputTitle,
-    description: inputDescription,
-    color: inputColor,
-    price: inputPrice,
-    stock: inputStock,
-    imageUrl: inputImg,
-  });
-  localStorage.setItem("products", JSON.stringify(productsStorage));
-  form.reset();
-  Swal.fire({
-    position: "center",
-    icon: "success",
-    title: "Se ha creado el producto exitosamente",
-    showConfirmButton: false,
-    timer: 1500,
-  });
-});
-
 const url = "../json/products.json";
 
 function getProducts() {
@@ -71,7 +33,7 @@ function fillProductsDiv(json) {
   document.getElementById("products").innerHTML = card;
 
   // Llamar a btnAddCart después de un par de segundos
-  setTimeout(btnAddCart, 1000);
+  setTimeout(btnAddCart, 500);
 }
 
 getProducts();
@@ -106,8 +68,8 @@ function addToCart(e) {
     nombre: nombreProducto,
     imagen: urlImage,
     cantidad: cantidad,
-    total: precioProducto,
     precio: precioProducto,
+    total: precioProducto,
   });
   console.log(productsCart);
   // Setear esos datos en el localStorage

@@ -51,14 +51,14 @@
   height: 2.2rem;
 }
 
-.modal-content{
+/* .modal-content{
   border-radius: 1rem!important;
   background: #ae83d3d0!important;
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
   border: 1.5px solid rgba(209, 213, 219, 0.2);
   color: var(--white);
-}
+} */
 
 .modal-bod{
   padding: 2rem;
