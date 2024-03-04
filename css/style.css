@@ -38,8 +38,33 @@ main {
   background-size: cover;
   background-attachment: fixed;
   scroll-behavior: smooth;
-  animation: gradient 8s ease infinite;
+  animation: gradient 13s ease infinite;
 }
+
+.columnas {
+  width: 25%;
+  border: 1px solid gray;
+  background-color: transparent;
+  transition: background-color 0.3s; /* Otra transición (opcional) */
+}
+
+.columnas:hover {
+  color: white;
+  background-color: red;
+}
+
+.columnas:hover:after {
+  background-image: var(--backgroundImg);
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  z-index: -1;
+}
+
 
 .img-nosotros {
   width: 60vw;
