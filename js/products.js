@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
   else{
     getProducts();
   } 
+  localStorage.removeItem('selectedCategoryId');
 });
 
 function getProducts(categoryId = null) {
