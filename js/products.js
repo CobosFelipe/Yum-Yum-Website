@@ -1,13 +1,29 @@
 const URL_BASE = "http://localhost:8080/api/v1";
 
-function getProducts() {
-  fetch(`${URL_BASE}/products`)
+document.addEventListener("DOMContentLoaded", function () {
+  
+  const selectedCategoryId = localStorage.getItem('selectedCategoryId');
+
+  if (selectedCategoryId) {
+    getProducts(selectedCategoryId);
+  }
+  else{
+    getProducts();
+  } 
+});
+
+function getProducts(categoryId = null) {
+  let apiUrl = `${URL_BASE}/products`;
+  if (categoryId) {
+    apiUrl = `${URL_BASE}/categories/products/${categoryId}`;
+  }
+  fetch(apiUrl)
     .then((response) => response.json())
     .then((json) => {
       fillProductsDiv(json);
     })
     .catch((error) => {
-      console.log("Error consumiendo la api: " + error);
+      console.log("Error consumiendo la API: " + error);
     });
 }
 
@@ -121,8 +137,6 @@ function fillModal (id) {
       console.error("Error obteniendo detalles del producto:", error);
     })
 }
-
-getProducts();
 
 function btnAddCart() {
   // Funcionalidad para consumir los datos de la tarjeta
