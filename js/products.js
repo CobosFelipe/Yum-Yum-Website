@@ -1,7 +1,7 @@
-const URL_BASE = "http://localhost:8080/api/v1/products";
+const URL_BASE = "http://localhost:8080/api/v1";
 
 function getProducts() {
-  fetch(URL_BASE)
+  fetch(`${URL_BASE}/products`)
     .then((response) => response.json())
     .then((json) => {
       fillProductsDiv(json);
@@ -9,6 +9,47 @@ function getProducts() {
     .catch((error) => {
       console.log("Error consumiendo la api: " + error);
     });
+}
+
+function getCategories() {
+  fetch(`${URL_BASE}/categories`)
+    .then((response) => response.json())
+    .then((data) => {
+      fillCategoriesNames(data);
+    });
+}
+
+getCategories();
+
+function getProductsByCategory(idCategory) {
+  fetch(`${URL_BASE}/categories/products/${idCategory}`)
+    .then((response) => response.json())
+    .then((data) => {
+      fillProductsDiv(data);
+    });
+}
+
+function fillCategoriesNames(array) {
+  let categories = `<button type="button" class="btn btn-dark" id="btn_id_0">Todos los productos</button>`;
+
+  for (let i = 0; i < array.length; i++) {
+    categories += `
+        <button type="button" class="btn btn-dark btn_id" id="btn_id_${array[i].idcategories}">${array[i].name}</button>
+      `;
+  }
+  document.getElementById("categories-buttons").innerHTML = categories;
+
+  const categoriesBtns = document.getElementsByClassName("btn_id");
+  for (let i = 0; i < categoriesBtns.length; i++) {
+    categoriesBtns[i].addEventListener("click", (e) => {
+      let idBtn = e.target.id;
+      let idCategory = idBtn.split("_")[2];
+      getProductsByCategory(idCategory);
+    });
+  }
+  document.getElementById("btn_id_0").addEventListener("click", (e) => {
+    getProducts();
+  });
 }
 
 function fillProductsDiv(json) {
@@ -33,22 +74,28 @@ function fillProductsDiv(json) {
   }
   document.getElementById("products").innerHTML = card;
 
-  const imageElements = document.getElementsByClassName("detail_product");
+  getProductsByClass();
 
-  for (let i = 0; i < imageElements.length; i++) {
-    imageElements[i].addEventListener('click' , (e) =>{
-      let imgId = e.target.id
-      let productId = imgId.split("_")[2];
-      fillModal(productId);
-    })
-  }
   // Llamar a btnAddCart después de un par de segundos
   setTimeout(btnAddCart, 500);
 }
 
+function getProductsByClass() {
+  
+  const imageElements = document.getElementsByClassName("detail_product");
+
+  for (let i = 0; i < imageElements.length; i++) {
+    imageElements[i].addEventListener("click", (e) => {
+      let imgId = e.target.id;
+      let productId = imgId.split("_")[2];
+      fillModal(productId);
+    });
+  }
+}
+
 function fillModal (id) {
   let modalContent = "";
-    fetch(`${URL_BASE}/${id}`)
+    fetch(`${URL_BASE}/products/${id}`)
     .then((response) => response.json())
     .then((data)=>{
         modalContent += `
