@@ -123,3 +123,27 @@ function redireccion() {
 }
 
 buyButton1.addEventListener("click", redireccion);
+
+// Funcion para la activacion de la animacion
+const container = document.getElementById("container");
+const btn = document.getElementsByClassName("buyButton2")[0];
+
+btn.addEventListener("click", function () {
+  setTimeout(activate, 1000);
+});
+
+function activate() {
+  container.classList.add("active");
+
+  // Después de x segundos, ejecuta la función deactivate y redireccion
+  setTimeout(function () {
+    deactivate();
+  }, 3000);
+  setTimeout(function () {
+    redireccion();
+  }, 2500);
+}
+
+function deactivate() {
+  container.classList.remove("active");
+}
