@@ -47,12 +47,12 @@ function getProductsByCategory(idCategory) {
 }
 
 function fillCategoriesNames(array) {
-  let categories = `<button type="button" class="btn btn-dark" id="btn_id_0">Todos los productos</button>`;
+  let categories = `<li><a class="dropdown-item btn_id" href="#" id="btn_id_0">Todos los productos</a></li>`;
 
   for (let i = 0; i < array.length; i++) {
     categories += `
-        <button type="button" class="btn btn-dark btn_id" id="btn_id_${array[i].idcategories}">${array[i].name}</button>
-      `;
+        <li><a class="dropdown-item btn_id" href="#" id="btn_id_${array[i].idcategories}" >${array[i].name}</a></li>
+        `;
   }
   document.getElementById("categories-buttons").innerHTML = categories;
 
@@ -69,12 +69,45 @@ function fillCategoriesNames(array) {
   });
 }
 
+function getProductsByPrice() {
+  fetch(`${URL_BASE}/products/price`)
+  .then((response) => response.json())
+  .then((data) => {
+    fillProductsDiv(data);
+  });
+}
+
+function getProductsByPriceDesc() {
+  fetch(`${URL_BASE}/products/price/desc`)
+  .then((response) => response.json())
+  .then((data)=>{
+    fillProductsDiv(data)
+  })
+}
+
+function filterByPrice() {
+  const filters = document.getElementsByClassName("priceFilter");
+  for (let i = 0; i < filters.length; i++) {
+    filters[i].addEventListener('click' , (e)=>{
+      if (e.target.id == "asc") {
+        getProductsByPrice();
+      }
+      else if(e.target.id == "desc"){
+        getProductsByPriceDesc();
+      }
+    })
+    
+  }
+}
+
+filterByPrice();
+
 function fillProductsDiv(json) {
   let card = "";
 
   for (let i = 0; i < json.length; i++) {
     card += `
-    <div class="card mb-2" style="width: 20rem;" >
+    <div class="card mb-2" style="width:20rem;" >
       <img src="${json[i].url_img}" class="card-img-top detail_product" id="detail_product_${json[i].idproducts}" alt="product" width="318px" height="318px" data-bs-toggle="modal" data-bs-target="#exampleModal">
       <div class="card-body">
           <h5 class="card-title">${json[i].name}</h5>
@@ -125,7 +158,6 @@ function fillModal (id) {
                 <h3 class="fs-3 fw-bold">${data.name}</h3>
                 <p class="fs-6">${data.description}</p>
                 <p class="fs-5">Precio: ${data.price.toLocaleString()}</p>
-                <p>Cantidad</p>
                 <div class="mb-5">
                   <button type="button" class="btn btn-dark">Añadir al carrito</button>
                 </div>
