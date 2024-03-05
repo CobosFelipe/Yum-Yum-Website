@@ -79,12 +79,11 @@ function productoNegativo(e) {
 
 // LocalStorage de los productos agregados
 const productos = JSON.parse(localStorage.getItem("Cart"));
-console.log(productos.length);
+console.log(productos);
 
 //Mostrar los productos del localStorage
 function mostrarProductos() {
   if (productos.length != 0) {
-    console.log("true");
     let card = "";
     for (let i = 0; i < productos.length; i++) {
       card += `
@@ -92,7 +91,6 @@ function mostrarProductos() {
       <img class="imgProduct" src="${productos[i].imagen}" />
       <p class="productName">${productos[i].nombre}</p>
       <p class="valor">$${productos[i].total.toLocaleString()}</p>
-      <p class="productCant">Cantidad</p>
       <div class="cantidad d-flex mt-1">
         <button class="btnMenos">-</button>
         <input class="product-cant-cart" type="text" value="${productos[i].cantidad}" disabled>
@@ -112,7 +110,7 @@ function mostrarProductos() {
     document.getElementById("cartContainer").innerHTML = img;
   }
   // Llamar a btnAddCart después de un par de segundos
-  setTimeout(agregarEventos, 500);
+  setTimeout(agregarEventos, 200);
 }
 
 mostrarProductos();
@@ -125,3 +123,27 @@ function redireccion() {
 }
 
 buyButton1.addEventListener("click", redireccion);
+
+// Funcion para la activacion de la animacion
+const container = document.getElementById("container");
+const btn = document.getElementsByClassName("buyButton2")[0];
+
+btn.addEventListener("click", function () {
+  setTimeout(activate, 1000);
+});
+
+function activate() {
+  container.classList.add("active");
+
+  // Después de x segundos, ejecuta la función deactivate y redireccion
+  setTimeout(function () {
+    deactivate();
+  }, 3000);
+  setTimeout(function () {
+    redireccion();
+  }, 2500);
+}
+
+function deactivate() {
+  container.classList.remove("active");
+}

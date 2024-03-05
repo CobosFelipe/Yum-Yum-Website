@@ -74,12 +74,37 @@
       <div class="header-divider"></div>
       <h2 class="contenedor-titulo fw-bold">Bolsa de compras</h2>
       <div class="divProducts" id="cartContainer">
-        <!-- Acá van los productos -->
+        <!-- Acá van los productos o la imagen de carro vacio-->
       </div>
-      
+      <!-- Aca va el modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <!-- Acá va la parte HTML de la animacion -->
+              <div id="container" class="container">
+                <div class="left-side">
+                 <div class="tarjeta">
+                  <div class="card-line"></div>
+                  <div class="buttons"></div>
+                 </div>
+                 <div class="post">
+                  <div class="post-line"></div>
+                  <div class="screen">
+                   <div class="dollar">Gracias por tu compra</div>
+                  </div>
+                  <div class="numbers"></div>
+                  <div class="numbers-line2"></div>
+                 </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="contenedor-boton">
         <button type="button" class="buyButton1 mb-2 mt-2" title="Buy">Seguir Comprando</button>
-        <button type="submit" class="buyButton2 mb-2 mt-2" title="Buy">Finalizar pedido</button>
+        <button type="submit" class="buyButton2 mb-2 mt-2" title="Buy" data-bs-toggle="modal" data-bs-target="#exampleModal">Finalizar pedido</button>
       </div>
     </main>
     <footer>
