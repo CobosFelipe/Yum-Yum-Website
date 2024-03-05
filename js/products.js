@@ -120,11 +120,11 @@ function fillModal (id) {
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body d-flex justify-content-evenly">
-              <img src="${data.url_img}" alt="" width="250px">
+              <img src="${data.url_img}" alt="product" width="318px" height="318px">
               <div class="p-3">
                 <h3 class="fs-3 fw-bold">${data.name}</h3>
                 <p class="fs-6">${data.description}</p>
-                <p class="fs-5">Precio: ${data.price}</p>
+                <p class="fs-5">Precio: ${data.price.toLocaleString()}</p>
                 <p>Cantidad</p>
                 <div class="mb-5">
                   <button type="button" class="btn btn-dark">Añadir al carrito</button>
