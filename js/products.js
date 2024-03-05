@@ -107,7 +107,7 @@ function fillProductsDiv(json) {
 
   for (let i = 0; i < json.length; i++) {
     card += `
-    <div class="card mb-2" style="width:20rem;" >
+    <div id="product_${i}" class="card mb-2" style="width:20rem;" >
       <img src="${json[i].url_img}" class="card-img-top detail_product" id="detail_product_${json[i].idproducts}" alt="product" width="318px" height="318px" data-bs-toggle="modal" data-bs-target="#exampleModal">
       <div class="card-body">
           <h5 class="card-title">${json[i].name}</h5>
@@ -116,14 +116,13 @@ function fillProductsDiv(json) {
           <span class="IconContainer"> 
             <img src="/svg/button-cart.svg">
           </span>
-          <p class="text">Lo quiero</p>
+          <p class="text">Agregar</p>
         </button>
       </div>
     </div>
     `;
   }
   document.getElementById("products").innerHTML = card;
-
   getProductsByClass();
 
   // Llamar a btnAddCart después de un par de segundos
@@ -149,9 +148,6 @@ function fillModal (id) {
     .then((response) => response.json())
     .then((data)=>{
         modalContent += `
-            <div class="modal-header">
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
             <div class="modal-body d-flex justify-content-evenly">
               <img src="${data.url_img}" alt="product" width="318px" height="318px">
               <div class="p-3">
@@ -159,16 +155,37 @@ function fillModal (id) {
                 <p class="fs-6">${data.description}</p>
                 <p class="fs-5">Precio: ${data.price.toLocaleString()}</p>
                 <div class="mb-5">
-                  <button type="button" class="btn btn-dark">Añadir al carrito</button>
+                  <button id="addCart" type="button" class="btn btn-dark">Añadir al carrito</button>
                 </div>
               </div>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
           `
       document.getElementById("modal").innerHTML = modalContent;
+      document.getElementById("addCart").addEventListener('click', function(){
+        addProduct(data.url_img, data.name, data.price);
+      })
     })
     .catch((error) => {
       console.error("Error obteniendo detalles del producto:", error);
     })
+}
+
+function addProduct(imagen, nombre, precio) {
+  // Inicializando un localStorage
+  const productsCart = JSON.parse(localStorage.getItem("Cart")) || [];
+  
+  // Agregar datos en el localStorage
+  productsCart.push({
+    nombre: nombre,
+    imagen: imagen,
+    cantidad: 1,
+    precio: precio,
+    total: precio,
+  });
+  console.log(productsCart);
+  // Setear esos datos en el localStorage
+  localStorage.setItem("Cart", JSON.stringify(productsCart));
 }
 
 function btnAddCart() {
