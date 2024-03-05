@@ -74,7 +74,7 @@ h2{
 .product{
   /* tamaño del div */
   width: 100%;
-  max-height: 150px;
+  max-height: 160px;
   display: grid;
   justify-items: center;
   align-content: center;
@@ -83,7 +83,7 @@ h2{
   grid-template-rows: auto;
   align-items: center;
   border-radius: 1rem;
-  padding: .5rem;
+  padding: 1rem;
   gap: .2rem;
   margin-bottom: 1rem;
   box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.5);
@@ -197,7 +197,7 @@ button.buyButton2{
 @media screen and (min-width: 620px){
   .product {
     display: grid;
-    grid-template-columns: 2fr 4fr 2fr 2fr 1fr;
+    grid-template-columns: 2fr 4fr 2fr 2fr .5fr;
     gap: 10px; /* Espacio entre las columnas */
     align-items: center; /* Alinea los elementos verticalmente en el centro */
   }
