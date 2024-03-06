@@ -40,7 +40,7 @@ main {
   background-size: cover;
   background-attachment: fixed;
   scroll-behavior: smooth;
-  animation: gradient 8s ease infinite;
+  animation: gradient 9s ease infinite;
 }
 
 .presentacion {
@@ -203,6 +203,7 @@ div.banner {
 
 /*Responsive Design*/
 @media screen and (min-width: 940px) {
+
   /*Main section*/
   .navLogo{
     width: 9rem;

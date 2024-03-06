@@ -49,7 +49,8 @@ input, textarea {
     margin: 0 1rem;
   }
   .conteiner-form{
-    width: 90vh;
+    width: 70vw;
+    max-width: 900px;
   }
   .logo-send-image{
     display: flex;
