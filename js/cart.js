@@ -74,7 +74,7 @@ function productoNegativo(e) {
 }
 
 // LocalStorage de los productos agregados
-const productos = JSON.parse(localStorage.getItem("Cart"));
+const productos = JSON.parse(localStorage.getItem("Cart")) || [];
 
 //Mostrar los productos del localStorage
 function mostrarProductos() {

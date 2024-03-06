@@ -183,6 +183,14 @@ function addProduct(imagen, nombre, precio) {
   console.log(productsCart);
   // Setear esos datos en el localStorage
   localStorage.setItem("Cart", JSON.stringify(productsCart));
+  // Alerta para notificar que se agregó
+  Swal.fire({
+    position: "center",
+    icon: "success",
+    title: "Se ha agregado el producto exitosamente",
+    showConfirmButton: false,
+    timer: 1500,
+  });
 }
 
 function btnAddCart() {
