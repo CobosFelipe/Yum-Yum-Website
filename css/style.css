@@ -40,7 +40,19 @@ main {
   background-size: cover;
   background-attachment: fixed;
   scroll-behavior: smooth;
-  animation: gradient 8s ease infinite;
+  animation: gradient 9s ease infinite;
+}
+
+.presentacion {
+  width: 60vw;
+  max-width: 20rem;
+  height: 20vh;
+  margin: auto;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .img-nosotros {
@@ -48,9 +60,9 @@ main {
   max-width: 20rem;
 }
 
-.fst-italic {
-  text-align: justify;
-  margin: 30px;
+.fst-italic{
+    text-align: justify;
+    margin: 30px;
 }
 .p-4 {
   text-align: justify;
@@ -125,15 +137,18 @@ main {
 .img {
   text-align: center;
 }
+
 .card {
   transition: all 0.2s ease-in-out;
   box-shadow: 0 0 3rem rgba(0, 0, 0, 0.25);
 }
+
 .card:hover {
   transform: scale(1.05);
   cursor: pointer;
   box-shadow: 0 0 3rem rgba(0, 0, 0, 0.35);
 }
+
 /*Footer section*/
 footer {
   background-color: #f8f9fa;
@@ -188,6 +203,7 @@ div.banner {
 
 /*Responsive Design*/
 @media screen and (min-width: 940px) {
+
   /*Main section*/
   .navLogo{
     width: 9rem;
@@ -202,7 +218,7 @@ div.banner {
     font-size: 1.3rem;
   }
   .presentacion {
-    height: 50vh;
+    height: 30vh;
   }
   .presentacion .img-nosotros {
     width: 38vw;

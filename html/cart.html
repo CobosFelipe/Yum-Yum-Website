@@ -72,67 +72,42 @@
     </header>
     <main>
       <div class="header-divider"></div>
-      <h2 class="mt-4 mb-4 fw-bold">Bolsa de compras</h2>
-      <div class="container-fluid divProducts">
-        <div class="product d-flex">
-          <img class="imgProduct" src="/img/Carlos.jpg" />
-          <div class="infoProducto d-flex">
-            <p>Nombre producto</p>
-            <p>Cantidad</p>
-            <p>Precio</p>
-            <div class="cantidad d-flex mt-1">
-              <button class="btnMenos">-</button>
-              <input class="product-cant-cart" type="text" value="1" disabled>
-              <button class="btnMas">+</button>
+      <h2 class="contenedor-titulo fw-bold">Bolsa de compras</h2>
+      <div class="divProducts" id="cartContainer">
+        <!-- Acá van los productos o la imagen de carro vacio-->
+      </div>
+      <!-- Aca va el modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <!-- Acá va la parte HTML de la animacion -->
+              <div id="container" class="container">
+                <div class="left-side">
+                 <div class="tarjeta">
+                  <div class="card-line"></div>
+                  <div class="buttons"></div>
+                 </div>
+                 <div class="post">
+                  <div class="post-line"></div>
+                  <div class="screen">
+                   <div class="dollar">Gracias por tu compra</div>
+                  </div>
+                  <div class="numbers"></div>
+                  <div class="numbers-line2"></div>
+                 </div>
+                </div>
+              </div>
             </div>
           </div>
-          <button type="button" class="btn-close" aria-label="Close"></button>
-        </div>
-        <div class="product d-flex">
-          <img class="imgProduct" src="/img/Juanita.jpg" />
-          <div class="infoProducto d-flex">
-            <p>Nombre producto</p>
-            <p>Cantidad</p>
-            <p>Precio</p>
-            <div class="cantidad d-flex mt-1">
-              <button class="btnMenos">-</button>
-              <input type="text" value="1" class="product-cant-cart" disabled>
-              <button class="btnMas">+</button>
-            </div>
-          </div>
-          <button type="button" class="btn-close" aria-label="Close"></button>
-        </div>
-        <div class="product d-flex">
-          <img class="imgProduct" src="/img/Carlos.jpg" />
-          <div class="infoProducto d-flex">
-            <p>Nombre producto</p>
-            <p>Cantidad</p>
-            <p>Precio</p>
-            <div class="cantidad d-flex mt-1">
-              <button class="btnMenos">-</button>
-              <input class="product-cant-cart" type="text" value="1" disabled>
-              <button class="btnMas">+</button>
-            </div>
-          </div>
-          <button type="button" class="btn-close" aria-label="Close"></button>
-        </div>
-        <div class="product d-flex">
-          <img class="imgProduct" src="/img/Juanita.jpg" />
-          <div class="infoProducto d-flex">
-            <p>Nombre producto</p>
-            <p>Cantidad</p>
-            <p>Precio</p>
-            <div class="cantidad d-flex mt-1">
-              <button class="btnMenos">-</button>
-              <input type="text" value="1" class="product-cant-cart" disabled>
-              <button class="btnMas">+</button>
-            </div>
-          </div>
-          <button type="button" class="btn-close" aria-label="Close"></button>
         </div>
       </div>
+      <div class="contenedor-boton">
+        <button type="button" class="buyButton1 mb-2 mt-2" title="Buy">Seguir Comprando</button>
+        <button type="submit" class="buyButton2 mb-2 mt-2" title="Buy" data-bs-toggle="modal" data-bs-target="#exampleModal">Finalizar pedido</button>
+      </div>
     </main>
-    <footer >
+    <footer>
       <div class="navFooter">
         <div class="d-flex links-footer">
           <ul class="ul-footer">

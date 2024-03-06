@@ -15,18 +15,6 @@
   box-sizing: border-box;
 }
 
-.presentacion {
-  width: 60vw;
-  max-width: 20rem;
-  height: 30vh;
-  margin: auto;
-  color: black;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
 .conteiner-products{
   width: 85vw;
   display: grid;
@@ -41,6 +29,23 @@
   position: relative;
 }
 
+.filters{
+  width: 80vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  gap: .5rem;
+}
+
+.dropdown a{
+  width: 9rem;
+}
+
+.dropdown-item{
+  min-width: 11rem!important;
+}
+
 .btn-cart{
   border-style: solid;
   border-width: 1px;
@@ -50,20 +55,13 @@
   width: 2.8rem;
   height: 2.2rem;
 }
-
-.modal-content{
-  border-radius: 1rem!important;
-  background: #ae83d3d0!important;
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px);
-  border: 1.5px solid rgba(209, 213, 219, 0.2);
-  color: var(--white);
+.filters{
+  display: flex;
+  justify-content: space-evenly;
 }
-
-.modal-bod{
-  padding: 2rem;
+.modal-body{
+  flex-wrap: wrap;
 }
-
 .input-container {
   height: 4rem;
   margin-bottom: 0.4rem;
@@ -152,4 +150,21 @@ input::placeholder{
 
 .text{
   margin: 0;
+}
+
+@media screen and (min-width: 940px) {
+  .modal-body{
+    flex-wrap: nowrap;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .filters{
+    flex-direction: row;
+    width: 75vw;
+    gap: 1rem;
+    justify-content: space-between;
+    margin: auto;
+    align-items: flex-end
+  }
 }
