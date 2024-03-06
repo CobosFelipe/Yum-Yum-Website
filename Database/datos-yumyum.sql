@@ -1,6 +1,6 @@
 -- INSERCION DE DATOS EN CATEGORIA -- 
 
-INSERT INTO `yumyum-database`.`categories`
+INSERT INTO categories
 (`idcategories`,
 `name`,
 `description`,
@@ -9,7 +9,7 @@ VALUES
 (default,
 "Tejido a mano",
 "Productos tejidos a mano con materiales de alta calidad",
-"https://res.cloudinary.com/dvun7eeq1/image/upload/v1709222985/r7myakqlpfuznuuqcnoy.jpg"),
+"https://res.cloudinary.com/dvun7eeq1/image/upload/v1709685411/tejido_k1oqf0.jpg"),
 (default,
 "Aretes",
 "Aretes con diversos estilos para que complementes tu personalidad",
@@ -21,7 +21,7 @@ VALUES
 (default,
 "Collares",
 "Productos tejidos a mano con materiales de alta calidad",
-"https://res.cloudinary.com/dvun7eeq1/image/upload/v1707952546/Collar-Perlas.webp"),
+"https://res.cloudinary.com/dvun7eeq1/image/upload/v1709685357/collar_zmgbve.webp"),
 (default,
 "Otros accesorios",
 "Encuentra muchísimos más productos lindos y divertidos aquí",
@@ -29,7 +29,7 @@ VALUES
 
 -- INSERCION DE DATOS EN PRODUCTOS -- 
 
-INSERT INTO `yumyum-database`.`products`
+INSERT INTO products
 (`idproducts`,
 `name`,
 `description`,
@@ -72,7 +72,7 @@ VALUES
 20,
 16000.0,
 "https://res.cloudinary.com/dvun7eeq1/image/upload/v1709231026/aretes-gomita_cfk5we.jpg",
-1),
+2),
 (DEFAULT,
 "Collar Margarita",
 "Collar margaritas en rodio",
@@ -170,25 +170,25 @@ VALUES
 15,
 12000.0,
 "https://res.cloudinary.com/dvun7eeq1/image/upload/v1709559575/llavero-tejido_putecz.webp",
-5),
+1),
 (DEFAULT,
 "Llaveros Amigurumi ballena",
 "Tejido en crochet con lana en poliéster suave y delicado ",
 12,
 12000.0,
 "https://res.cloudinary.com/dvun7eeq1/image/upload/v1709559608/llavero-tejido-ballena_jm3fov.jpg",
-5),
+1),
 (DEFAULT,
 "Laveros Amigurumi aguacate",
 "Tejido en crochet con lana en poliester suave y delicado",
 12,
 12000.0,
 "https://res.cloudinary.com/dvun7eeq1/image/upload/v1709559643/llavero-tejido-aguacate_yzqb59.jpg",
-5),
+1),
 (DEFAULT,
 "Bucket hat pollito",
 "Tejido en crochet con lana hipoalergenia suave y caliente 50% algodon 50% poliester",
 15,
 60000.0,
 "https://res.cloudinary.com/dvun7eeq1/image/upload/v1709561381/gorro-pollito_ikyblc.jpg",
-5);
+1);
