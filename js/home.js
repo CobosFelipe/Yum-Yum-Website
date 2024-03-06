@@ -1,4 +1,4 @@
-const url = "http://small-yak-production.up.railway.app/api/v1/categories";
+const url = "https://small-yak-production.up.railway.app/api/v1/categories";
 
 function getCategories() {
   fetch(url)

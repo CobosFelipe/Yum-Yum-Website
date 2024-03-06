@@ -1,4 +1,4 @@
-const URL_BASE = "http://small-yak-production.up.railway.app/api/v1";
+const URL_BASE = "https://small-yak-production.up.railway.app/api/v1";
 
 document.addEventListener("DOMContentLoaded", function () {
   const selectedCategoryId = localStorage.getItem("selectedCategoryId");
