@@ -44,12 +44,10 @@ function restar(i) {
     let valor = productos[i].precio;
     cantidad--;
     let total = cantidad * valor;
-    console.log(total);
     productos[i].cantidad = cantidad;
     productos[i].total = total;
     localStorage.setItem("Cart", JSON.stringify(productos));
     mostrarProductos();
-    console.log(productos);
   }
 }
 
@@ -58,12 +56,10 @@ function agregar(i) {
   let valor = productos[i].precio;
   cantidad++;
   let total = cantidad * valor;
-  console.log(total);
   productos[i].cantidad = cantidad;
   productos[i].total = total;
   localStorage.setItem("Cart", JSON.stringify(productos));
   mostrarProductos();
-  console.log(productos);
 }
 
 function eliminar(e) {
@@ -79,7 +75,6 @@ function productoNegativo(e) {
 
 // LocalStorage de los productos agregados
 const productos = JSON.parse(localStorage.getItem("Cart"));
-console.log(productos);
 
 //Mostrar los productos del localStorage
 function mostrarProductos() {
