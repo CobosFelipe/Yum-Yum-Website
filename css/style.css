@@ -46,7 +46,7 @@ main {
 .presentacion {
   width: 60vw;
   max-width: 20rem;
-  height: 30vh;
+  height: 20vh;
   margin: auto;
   color: black;
   display: flex;
@@ -217,7 +217,7 @@ div.banner {
     font-size: 1.3rem;
   }
   .presentacion {
-    height: 50vh;
+    height: 30vh;
   }
   .presentacion .img-nosotros {
     width: 38vw;

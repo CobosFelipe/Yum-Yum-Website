@@ -29,6 +29,19 @@
   position: relative;
 }
 
+.filters{
+  width: 80vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  gap: .5rem;
+}
+
+.dropdown a{
+  width: 9rem;
+}
+
 .btn-cart{
   border-style: solid;
   border-width: 1px;
@@ -134,8 +147,20 @@ input::placeholder{
 .text{
   margin: 0;
 }
+
 @media screen and (min-width: 940px) {
-.modal-body{
-  flex-wrap: nowrap;
+  .modal-body{
+    flex-wrap: nowrap;
+  }
 }
+
+@media screen and (min-width: 768px) {
+  .filters{
+    flex-direction: row;
+    width: 75vw;
+    gap: 1rem;
+    justify-content: space-between;
+    margin: auto;
+    align-items: flex-end
+  }
 }
