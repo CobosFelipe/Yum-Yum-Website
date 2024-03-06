@@ -39,8 +39,6 @@ CREATE TABLE IF NOT EXISTS `yumyum-database`.`products` (
   `description` VARCHAR(255) NOT NULL,
   `amount_stock` INT NOT NULL,
   `price` DOUBLE NOT NULL,
-  `has_color` TINYINT(1) NOT NULL,
-  `colors` VARCHAR(255) NOT NULL,
   `url_img` VARCHAR(255) NOT NULL,
   `categories_idcategories` BIGINT NOT NULL,
   PRIMARY KEY (`idproducts`),
